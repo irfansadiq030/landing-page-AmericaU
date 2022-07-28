@@ -15,18 +15,19 @@
 				  1px 3px 2px #000,
 				  1px -1px 0 #000,
 				  -1px -1px 0 #000;
-    margin-top: 5px;
+    margin-bottom: 2px;
 }
 
 /* Responsiveness */
 
 @media screen and(min-width:900px) {
+    /* .nav-links-container li{
+        margin: 3px 0px;
+    } */
+}
+@media screen and (min-width:1440px) {
     .nav-links-container li{
         margin: 5px 0px;
-    }
-}
-@media screen and(min-width:1440px) {
-    .nav-links-container li{
-        margin: 10px 0px;
+        font-size: 22px;
     }
 }

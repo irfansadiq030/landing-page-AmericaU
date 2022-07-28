@@ -6,17 +6,24 @@ const Sidebar = () => {
     return (
         <>
             <div className="sidebar-container">
-                <div className="logo-container">
-                    <img className='logo-img' src="images/logo.png" alt="" />
+                <div className='logo-nav-container'>
+                    <div className="logo-container">
+                        <img className='logo-img' src="images/logo.png" alt="" />
+                    </div>
+                    <Navmenu />
                 </div>
-                <Navmenu />
-                <div className="meet-heroes-img-container">
-                    <img className='meet-heroes-img' src="images/meethHeroes.jpg" alt="" />
+
+                <div className='sidebar-footer-container'>
+                    <div className="meet-heroes-img-container">
+                        <img className='meet-heroes-img' src="images/meethHeroes.jpg" alt="" />
+                    </div>
+                    <div className="portal-container">
+                        <img className='portal-img' src="images/portal-btn.png" alt="" />
+                        <p className='portal-text'>Parent/Teacher Login</p>
+                    </div>
+                    <p className='logout-link'>Logout</p>
                 </div>
-                <div className="portal-container">
-                    <p>Parent/Teacher Login</p>
-                </div>
-                <p className='logout-link'>Logout</p>
+
             </div>
         </>
     )
