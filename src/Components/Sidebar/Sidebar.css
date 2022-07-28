@@ -14,6 +14,9 @@
 .logo-nav-container{
     width: 100%;
     height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 .sidebar-footer-container{
     width: 100%;
@@ -119,7 +122,7 @@
     }
 
     .portal-container {
-        height: 95px;
+        height: 75px;
         margin-top: 10px;
         font-size: 23px;
     }
