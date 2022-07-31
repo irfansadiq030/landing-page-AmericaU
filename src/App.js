@@ -1,7 +1,6 @@
 import './App.css';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Main from './Components/Main/Main';
-import { useState } from 'react';
 // import MobileHeader from './Components/MobileHeader/MobileHeader';
 
 function App() {
