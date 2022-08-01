@@ -11,14 +11,16 @@
     flex-direction: column;
     justify-content: space-around;
 }
-.logo-nav-container{
+
+.logo-nav-container {
     width: 100%;
     height: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
 }
-.sidebar-footer-container{
+
+.sidebar-footer-container {
     width: 100%;
     height: 40%;
     display: flex;
@@ -36,7 +38,7 @@
 }
 
 .logo-img {
-    width:100%;
+    width: 100%;
     height: 100%;
 }
 
@@ -76,10 +78,12 @@
     position: relative;
     cursor: pointer;
 }
-.portal-text{
+
+.portal-text {
     position: absolute;
 }
-.portal-img{
+
+.portal-img {
     width: 100%;
     height: 100%;
 }
@@ -99,9 +103,24 @@
 /* Responsiveness */
 
 @media screen and (max-width:800px) {
-    .sidebar-container{
+    .sidebar-container {
         display: none;
         position: fixed;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .sidebar-container {
+        width: 245px;
+    }
+
+    .portal-container {
+        font-size: 19px;
+    }
+
+    .logo-container {
+        width: 130px;
+        height: 119px
     }
 }
 
@@ -109,11 +128,16 @@
     .sidebar-container {
         width: 315px;
     }
-    .meet-heroes-img-container{
+
+    .sidebar-footer-container {
+        height: 35%;
+    }
+
+    .meet-heroes-img-container {
         margin-top: 10px;
     }
 
-    .logo-container{
+    .logo-container {
         width: 180px;
         height: 167px;
     }
@@ -123,7 +147,8 @@
         margin-top: 10px;
         font-size: 23px;
     }
-    .logout-link{
+
+    .logout-link {
         margin-top: 10px;
         font-size: 25px;
     }
