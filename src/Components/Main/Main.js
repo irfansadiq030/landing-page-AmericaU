@@ -1,6 +1,7 @@
 import React from 'react'
 import './Main.css'
 import './MobileHeader.css'
+import BlogSlider from './BlogSlider/BlogSlider'
 
 const Main = (props) => {
 
@@ -35,9 +36,33 @@ const Main = (props) => {
               </div>
             </div>
           </div>
-          
+          <div className="myheroes-container">
+            <img src="images/Portal_btnBlue.png" alt="" className="myheroes-img" />
+            <h1 className="myheroes-text">My Hero</h1>
+          </div>
+          <div className="myfriends-container">
+            <img src="images/Portal_btnOrange.png" alt="" className="myheroes-img" />
+            <h1 className="myheroes-text">Friends</h1>
+          </div>
+          <div className="chat-container">
+            <img src="images/Portal_btnOrange.png" alt="" className="myheroes-img" />
+            <h1 className="myheroes-text">Chat</h1>
+          </div>
         </div>
 
+      </div>
+
+      <div className="blog-row">
+        <div className="heading-btn-container">
+          <h1 className="latest-blogs-heading">Latest Blogs & Updates</h1>
+          <div className="read-more-btn-container">
+            <img className='readmore-btn-img' src="images/Portal_btnOrange.png" alt="" />
+            <a href="/" className="read-more-btntext">Read More</a>
+          </div>
+        </div>
+
+        {/* Blog Slider */}
+        <BlogSlider />
       </div>
     </div>
   )
