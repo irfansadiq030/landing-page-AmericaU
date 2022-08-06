@@ -99,13 +99,21 @@
     font-size: 20px;
 }
 
-
+.mobile_sidebar_container{
+    display: none;
+}
 /* Responsiveness */
 
 @media screen and (max-width:800px) {
-    .sidebar-container {
+    .mobile_sidebar-container {
+        /* position: fixed;
+        z-index: 7; */
         display: none;
+    }
+    .sidebar-container{
         position: fixed;
+        z-index: 7;
+        display: none;
     }
 }
 

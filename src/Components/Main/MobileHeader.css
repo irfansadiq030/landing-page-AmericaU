@@ -1,7 +1,7 @@
 .mobile-header {
     padding: 5px 20px;
     width: 100%;
-    background: blue;
+    /* background: blue; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,15 +24,17 @@
 }
 
 .bars-icon {
-    color: #000;
+    color: #fff;
     font-size: 24px;
     width: 50px;
     height: 50px;
-    background: #fff;
+    background: #ff8500;
     border-radius: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    text-shadow: -2px 2px 2px #000;
 }
 
 @media screen and (min-width:800px) {

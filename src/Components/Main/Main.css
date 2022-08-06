@@ -23,7 +23,7 @@
 
 .season-box {
     width: 630px;
-    height: 250px;
+    min-height: 250px;
     background: #009fc78c;
     padding: 10px;
     position: relative;
@@ -247,4 +247,40 @@
     bottom: 5px;
     left: 24px;
     text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+
+@media screen and (max-width:800px) {
+    .row{
+        flex-direction: column;
+    }
+    .season-box{
+        width: 100%;
+        height: 300px;
+    }
+    .season-heading{
+        font-size: 28px;
+    }
+    .character-container{
+        display: none;
+    }
+    .heading-btn-container{
+        flex-direction: column;
+        align-items: start;
+        width: 100%;
+        top: -35px;
+    }
+    .left-arrow-container{
+        left: -15px !important;
+    }
+    .right-arrow-container{
+        right: 5px !important;
+    }
+    .blog-container{
+        margin-left: 8px;
+    }
+    .btn{
+        left:10px;
+    }
 }

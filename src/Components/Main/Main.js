@@ -1,19 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Main.css'
 import './MobileHeader.css'
 import BlogSlider from './BlogSlider/BlogSlider'
+import { GlobalInfo } from '../../App';
 
 const Main = (props) => {
+  const { sidebar, HideSidebar } = useContext(GlobalInfo);
+  // console.log(sidebar);
 
   return (
     <div className='main-container'>
       <div className="mobile-header">
         <div className="hamburger-container">
-          <i class="fa-solid fa-bars bars-icon"></i>
+          <i onClick={() => HideSidebar(sidebar)} class="fa-solid fa-bars bars-icon"></i>
         </div>
       </div>
 
       <div className="row">
+
         <div className="season-box">
           <h1 className='season-heading'>Season 1 is here!</h1>
           <p className="season-description">
