@@ -1,0 +1,118 @@
+.chat-txt-container {
+    width: 90%;
+    height: 70%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 3px solid black;
+    background: #fff;
+    margin: 0 auto;
+    /* -webkit-clip-path: polygon(0 0, 100% 0%, 9% 100%, 0% 100%); */
+    clip-path: polygon(0 0, 98% 0%, 89% 100%, 0% 100%);
+    padding: 10px 5px;
+}
+
+.chatMsg-time-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    margin-bottom: 5px;
+}
+
+.chat-txt-container::scrollbar {
+    width: 0px;
+}
+
+.chat-txt-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.txt-msg {
+    width: 90%;
+    color: #000;
+    border-radius: 30px;
+    background: #65e93a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 0 auto;
+    font-family: 'Acme';
+}
+
+.msg-time {
+    color: #000;
+    font-size: 10px;
+    font-family: 'Acme';
+    padding-right: 15px;
+    padding-top: 5px;
+    font-style: italic;
+}
+
+.chat-category {
+    width: 80%;
+    margin: 0 auto;
+    /* background: #fff; */
+    margin-top: -5px;
+    margin-left: 11px;
+}
+
+.chat-dropdown {
+    width: 100%;
+    padding: 5px;
+    border: 2px solid black;
+    font-family: 'Acme';
+    text-transform: uppercase;
+}
+
+.chat-txt {
+    padding: 7px;
+    width: 100%;
+    border-top: 0;
+    border: 2px solid black;
+    margin-top: 1px;
+    font-family: 'Acme';
+}
+
+.post-btn {
+    margin-top: 10px;
+    width: 80%;
+    height: 35px;
+    border: 0;
+    background: transparent;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+}
+
+.btn-img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: -10px;
+}
+
+.post-btn-txt {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 20px;
+}
+.chat-container {
+    position: absolute;
+    width: 106px;
+    height: 37px;
+    top: 235px;
+    left: 40px;
+    cursor: pointer;
+}

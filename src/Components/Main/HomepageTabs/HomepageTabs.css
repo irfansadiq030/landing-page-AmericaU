@@ -1,0 +1,33 @@
+.character-container {
+    width: 350px;
+    height: 100%;
+    /* border: 2px solid yellow; */
+    position: relative;
+}
+
+.chat-tab, .friends-tab {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: #fff; */
+    /* border: 2px solid red; */
+    width: 100%;
+    height: 90%;
+    flex-direction: column;
+    /* overflow-x: auto; */
+    position: relative;
+}
+
+.power-select-character {
+    width: 216px;
+    height: 327px;
+    background-image: url('../../../../public/images/PowerSelect_characterbox.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}

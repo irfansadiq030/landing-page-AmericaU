@@ -79,291 +79,6 @@
 
 }
 
-.character-container {
-    width: 350px;
-    height: 100%;
-    /* border: 2px solid yellow; */
-    position: relative;
-}
-
-.chat-tab,.friends-tab {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    /* background-color: #fff; */
-    /* border: 2px solid red; */
-    width: 100%;
-    height: 90%;
-    flex-direction: column;
-    /* overflow-x: auto; */
-    position: relative;
-}
-
-.friends-name-search {
-    width: 90%;
-    padding: 3px 0px;
-    /* text-shadow: 1px 1px 2px #000; */
-    color: silver;
-    font-family: 'Brady Bunch Remastered';
-    font-size: 18px;
-    /* text-transform: uppercase; */
-    border: 0;
-    -webkit-clip-path: polygon(0 1%, 100% 0%, 97% 100%, 0 100%);
-    clip-path: polygon(0 1%, 100% 0%, 97% 100%, 0 100%);
-}
-
-input[type=text] {
-    padding-left: 10px;
-}
-
-.login-to-heroes-text {
-    font-family: 'Acme';
-    font-size: 13px;
-    margin-top: 10px;
-}
-
-.friends-list-container {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 95%;
-    height: 60%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    /* border: 2px solid red; */
-    /* background-color: #000; */
-    /* margin: 0 auto; */
-    position: absolute;
-    bottom: 60px;
-    left: 5px;
-    /* -webkit-clip-path: polygon(0 0, 100% 0%, 9% 100%, 0% 100%); */
-    clip-path: polygon(0 0, 95% 0%, 87% 100%, 0% 100%);
-
-}
-
-.friends-list-container::-webkit-scrollbar {
-    width: 0px;
-}
-
-.friends-name-container {
-    color: #000;
-    width: 100%;
-    background-color: #fff;
-    margin: 5px;
-    padding: 5px;
-    border: 2px solid black;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.friends-status{
-    width: 15px;
-    height: 15px;
-    border-radius: 100px;
-}
-.fr-name{
-    font-family: 'Acme';
-    font-style: 20px;
-    padding-left: 10px;
-}
-.chat-txt-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    width: 90%;
-    height: 70%;
-    overflow-y: auto;
-    overflow-x: hidden;
-    border: 3px solid black;
-    background: #fff;
-    margin: 0 auto;
-    /* -webkit-clip-path: polygon(0 0, 100% 0%, 9% 100%, 0% 100%); */
-    clip-path: polygon(0 0, 98% 0%, 89% 100%, 0% 100%);
-    padding: 10px 5px;
-}
-.txt-msg{
-    width: 90%;
-    color: #000;
-    border-radius: 30px;
-    background: #60cb3d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    margin: 0 auto;
-    font-family: 'Acme';
-}
-.msg-time{
-    color: #000;
-    font-size: 12px;
-    /* position: absolute; */
-}
-.chat-category{
-    width: 80%;
-    margin: 0 auto;
-    /* background: #fff; */
-    margin-top: -5px;
-    margin-left: 11px;
-}
-.chat-dropdown{
-    width: 100%;
-    padding: 5px;
-    border: 2px solid black;
-    font-family: 'Acme';
-    text-transform: uppercase;
-}
-.chat-txt{
-    padding: 7px;
-    width: 100%;
-    border-top: 0;
-    border: 2px solid black;
-    margin-top: 1px;
-}
-.post-btn{
-    margin-top: 10px;
-    width: 80%;
-    height: 35px;
-    border: 0;
-    background: transparent;
-    position: absolute;
-    bottom: 0px;
-    left: 10px;
-}
-.btn-img{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    bottom: -10px;
-}
-.post-btn-txt{
-    position: absolute;
-    top: 10px;
-    left: 0;
-    right: 0;
-    color: #fff;
-    text-transform: uppercase;
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    font-family: 'Brady Bunch Remastered';
-    font-size: 20px;
-}
-
-
-
-.power-select-character {
-    width: 216px;
-    height: 327px;
-    background-image: url('../../../public/images/PowerSelect_characterbox.png');
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.charcter-img {
-    width: 128px;
-    height: 253px;
-    position: absolute;
-    bottom: 15px;
-}
-
-.dailyChalleng-box {
-    width: 250px;
-    height: 40px;
-    position: absolute;
-    top: 10px;
-    right: 30px;
-    /* background-image: url('../../../public/images/DailyChallenge_box.png');
-    background-position: 0 0;
-    background-size: cover; */
-}
-
-.box-img {
-    position: absolute;
-    width: 100%;
-}
-
-.name-container {
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 10px;
-}
-
-.charcter-name {
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    color: #fff;
-    font-family: 'Brady Bunch Remastered';
-    font-size: 27px;
-    text-transform: uppercase;
-}
-
-.myheroes-container {
-    position: absolute;
-    width: 106px;
-    height: 37px;
-    top: 150px;
-    left: 40px;
-    cursor: pointer;
-}
-
-.myheroes-img {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.myheroes-text {
-    text-shadow: -2px 2px 2px #000,
-        2px 3px 2px #000,
-        2px -2px 0 #000,
-        -2px -2px 0 #000;
-    color: #fff;
-    /* -webkit-text-fill-color: white; */
-    font-family: 'Brady Bunch Remastered';
-    /* font-family: 'Acme'; */
-    font-size: 24px;
-    text-transform: uppercase;
-    position: absolute;
-    left: 10px;
-    bottom: 8px;
-    letter-spacing: 2px;
-}
-
-.myfriends-container {
-    position: absolute;
-    width: 106px;
-    height: 37px;
-    top: 193px;
-    left: 40px;
-    cursor: pointer;
-}
-
-.chat-container {
-    position: absolute;
-    width: 106px;
-    height: 37px;
-    top: 235px;
-    left: 40px;
-    cursor: pointer;
-}
-
 .blog-row {
     width: 95%;
     height: 240px;
@@ -445,10 +160,15 @@ input[type=text] {
     }
 
     .heading-btn-container {
-        flex-direction: column;
-        align-items: start;
+        /* flex-direction: column; */
+        align-items: center;
         width: 100%;
-        top: -35px;
+        top: -20px;
+    }
+    .latest-blogs-heading{
+        display: block;
+        width: 180px;
+        /* background: #000; */
     }
 
     .left-arrow-container {
@@ -465,5 +185,8 @@ input[type=text] {
 
     .btn {
         left: 10px;
+        width: 210px;
+        height: 70px;
+        bottom: 25px;
     }
 }

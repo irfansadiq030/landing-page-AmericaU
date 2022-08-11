@@ -1,7 +1,8 @@
 .mobile-header {
     padding: 5px 20px;
     width: 100%;
-    /* background: blue; */
+    background: url('../../../public/images/sidebar-bg.png');
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,6 +12,23 @@
 .mobile-logo-container {
     width: 70px;
     /* border: 2px solid white; */
+}
+.mobile-menu-icon-container{
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-text{
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 40px;
+    letter-spacing: 2px;
 }
 
 .mobile-logo {
@@ -35,6 +53,12 @@
     align-items: center;
 
     text-shadow: -2px 2px 2px #000;
+}
+.mobile-logo-container{
+    width: 70px;
+}
+.mobile-logo-container img{
+    width: 100%;
 }
 
 @media screen and (min-width:800px) {
