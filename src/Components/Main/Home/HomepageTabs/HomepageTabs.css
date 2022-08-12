@@ -21,7 +21,8 @@
 .power-select-character {
     width: 216px;
     height: 327px;
-    background-image: url('../../../../public/images/PowerSelect_characterbox.png');
+    /* background-image: url('../../../../public/images/PowerSelect_characterbox.png'); */
+    background-image: url('../../../../../public/images/PowerSelect_characterbox.png');
     background-size: cover;
     background-position: center;
     position: absolute;

@@ -1,7 +1,7 @@
 .mobile-header {
     padding: 5px 20px;
     width: 100%;
-    background: url('../../../public/images/sidebar-bg.png');
+    background: url('../../../../public/images/sidebar-bg.png');
     background-size: cover;
     display: flex;
     justify-content: space-between;

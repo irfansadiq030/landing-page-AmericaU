@@ -7,7 +7,7 @@
     flex-direction: column;
     
 }
-.nav-links-container li{
+.nav-links-container a{
     font-family: 'Brady Bunch Remastered';
     color: #fff;
 	font-size: 20px;
@@ -16,6 +16,7 @@
 				  1px -1px 0 #000,
 				  -1px -1px 0 #000;
     margin-bottom: 2px;
+    text-decoration: none;
 }
 
 /* Responsiveness */

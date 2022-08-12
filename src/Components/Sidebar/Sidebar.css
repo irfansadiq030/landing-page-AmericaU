@@ -1,15 +1,16 @@
 .sidebar-container {
     background: url('../../../public/images/sidebar-bg.png');
     background-size: cover;
-    /* background-position: -25px -14px; */
     background-position: right center;
     background-repeat: no-repeat;
-    width: 285px;
+    width: 250px;
     height: 100%;
     padding: 10px 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    position: fixed;
+    z-index: 10;
 }
 
 .logo-nav-container {
@@ -104,15 +105,31 @@
 }
 /* Responsiveness */
 
+@media screen and (max-width:580px) {
+    .sidebar-container{
+        width: 180px !important;
+    }
+    .logo-container {
+        width: 110px !important;
+        height: 119px;
+    }
+    .meet-heroes-img-container{
+        width: 95%;
+    }
+    .portal-container{
+        font-size: 16px !important;
+    }
+}
+
 @media screen and (max-width:800px) {
     .mobile_sidebar-container {
-        /* position: fixed;
-        z-index: 7; */
+        position: relative;
+        /* z-index: 7; */
         display: none;
     }
     .sidebar-container{
         position: fixed;
-        z-index: 7;
+        z-index: 10;
         display: none;
     }
 }
