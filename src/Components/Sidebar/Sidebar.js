@@ -12,7 +12,7 @@ const Sidebar = () => {
             <div style={sidebar ? { display: 'flex' } : {}} className='sidebar-container'>
                 <div className='logo-nav-container'>
                     <div className="logo-container">
-                        <img className='logo-img' src="images/logo.png" alt="" />
+                        <Link to="/"> <img className='logo-img' src="images/logo.png" alt="" /> </Link>
                     </div>
                     <Navmenu />
                 </div>

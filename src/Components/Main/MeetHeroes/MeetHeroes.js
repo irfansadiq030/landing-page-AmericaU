@@ -1,12 +1,13 @@
 import React from 'react'
 import './MeetHeroes.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
+import PageTitle from './PageTitle/PageTitle'
 
 const MeetHeroes = () => {
     return (
         <div className='meetHeroes-container'>
             <MobileHeader />
-            <h1 className="page-title">Meet the Heroes</h1>
+            <PageTitle title="Meet the Heroes"/>
             <img className='meetHeroes-main-img' src="images/vector.png" alt="" />
             <div className="heroes-data-container">
                 <img className='heroes-img-collection' src="images/meet-heroes/ARKSEED.png" alt="" />

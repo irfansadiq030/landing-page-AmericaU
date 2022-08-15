@@ -1,19 +1,19 @@
 import React from 'react'
 import './Navmenu.css'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navmenu = () => {
   return (
     <nav className='nav-bar'>
-      <ul className='nav-links-container'>
-        <li><Link to='/'>News</Link></li>
-        <li><Link to='/'>Season Pass</Link></li>
-        <li><Link to='/'>Events</Link></li>
-        <li><Link to='/'>Videos</Link></li>
-        <li><Link to='/'>Games</Link></li>
-        <li><Link to='/'>Comics</Link></li>
-        <li><Link to='/'>LeaperBoard</Link></li>
-        <li><Link to='/'>Blog</Link></li>
+      <ul className='nav-NavLinks-container'>
+        <li><NavLink to='/news'>News</NavLink></li>
+        <li><NavLink to='/season'>Season Pass</NavLink></li>
+        <li><NavLink to='/events'>Events</NavLink></li>
+        <li><NavLink to='/videos'>Videos</NavLink></li>
+        <li><NavLink to='/games'>Games</NavLink></li>
+        <li><NavLink to='/comics'>Comics</NavLink></li>
+        <li><NavLink to='/leaper'>LeaperBoard</NavLink></li>
+        <li><NavLink to='/blog'>Blog</NavLink></li>
       </ul>
     </nav>
   )

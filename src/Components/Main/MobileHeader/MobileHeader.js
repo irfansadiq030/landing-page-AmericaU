@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { GlobalInfo } from '../../../App';
+import { Link } from 'react-router-dom';
 
 const MobileHeader = () => {
     const { sidebar, HideSidebar } = useContext(GlobalInfo);
@@ -7,7 +8,7 @@ const MobileHeader = () => {
         <>
             <div className="mobile-header">
                 <div className="mobile-logo-container">
-                    <img src="images/Logo.png" alt="" />
+                    <Link to="/"> <img src="images/Logo.png" alt="Logo" /> </Link>
                 </div>
                 <div className='mobile-menu-icon-container'>
                     <h1 className="menu-text">Menu</h1>
