@@ -13,7 +13,7 @@ const MobileHeader = () => {
                 <div className='mobile-menu-icon-container'>
                     <h1 className="menu-text">Menu</h1>
                     <div className="hamburger-container">
-                        <i onClick={() => HideSidebar(sidebar)} class="fa-solid fa-bars bars-icon"></i>
+                        <i onClick={() => HideSidebar(sidebar)} className="fa-solid fa-bars bars-icon"></i>
                     </div>
                 </div>
 

@@ -30,13 +30,13 @@ li a{
     }
 }
 @media screen and (min-width:1440px) {
-    .nav-links-container li{
+    li a{
         margin: 7px 0px;
         font-size: 25px;
     }
 }
 @media screen and (min-width:1700px) {
-    .nav-links-container li{
+    li a{
         margin: 10px 0px;
         font-size: 25px;
     }
