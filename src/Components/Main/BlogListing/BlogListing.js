@@ -2,6 +2,7 @@ import React from 'react'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import './BlogListing.css'
 import PageTitle from '../MeetHeroes/PageTitle/PageTitle'
+import { Link } from 'react-router-dom'
 
 const blogData = [
     {
@@ -62,7 +63,7 @@ const BlogListing = () => {
                                     <img className='bloListing-thumbnail' src={`images/${blog.img}`} alt="blog thumbnail" />
                                 </div>
                                 <div className="blogContent-container">
-                                    <h1 className="blogListing-title">{blog.title}</h1>
+                                    <Link className="blogtitle-link" to="/blog-detail"><h1 className="blogListing-title">{blog.title}</h1></Link>
                                     <p className="blog-date">{blog.blogDate} </p>
                                     <p className="blog-description">
                                         {blog.description}

@@ -79,6 +79,9 @@
     cursor: pointer;
 
 }
+.blogtitle-link{
+    text-decoration: none;
+}
 
 /* Mobile Responsiveness */
 

@@ -1,0 +1,163 @@
+.blogDetail-container {
+    background-image: url('../../../../public/images/pages-bg.jpg');
+    /* background: #00a0c7; */
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    margin-left: 250px;
+    overflow: auto;
+
+}
+
+.blogDetail-main-img {
+    width: 80%;
+    margin: auto;
+    display: block;
+    padding-top: 50px;
+}
+
+.blogDetail-title {
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 60px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.blog-meta-container {
+    width: 100%;
+    text-align: center;
+}
+
+.blog-meta-container span {
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 20px;
+    text-transform: capitalize;
+    padding: 0px 5px;
+    text-align: center;
+    letter-spacing: 3px;
+    /* border-right: 2px solid #000; */
+}
+
+.blogDetail-content-container {
+    padding: 30px;
+    width: 90%;
+    margin: 20px auto;
+    background: #fff;
+    color: #000;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    text-align: center;
+    border-radius: 1px;
+}
+
+.blogDetail-content-container p {
+    padding: 15px 0px;
+}
+
+.blogComment-container {
+    width: 90%;
+    background: #0076a3;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.commentfield {
+    border-radius: 3px;
+    border: 0;
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 17px;
+}
+
+.addComment-btn {
+    padding: 10px 20px;
+    border: 0;
+    background: #17a2b8;
+    border-radius: 3px;
+    font-family: Arial;
+    font-size: 17px;
+    margin-top: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.commentsCount{
+    font-family: Arial;
+    font-weight: 500;
+    padding-bottom: 10px;
+    border-bottom: 3px solid white;
+    margin-bottom: 15px;
+}
+.commentList-container{
+    width: 100%;
+    background: #fff;
+    /* padding: 10px; */
+    margin-top: 50px;
+}
+.commentDetail-container{
+    width: 100%;
+    background: #eef7ff;
+    padding: 20px;
+    display: flex;
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+}
+.commentor-imgContainer{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #17a2b8;
+    border-radius: 100px;
+    background: #fff;
+    /* padding: ; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.comment-time{
+    color: #17a2b8;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+.commentData{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    /* background: #000; */
+}
+.commenter-info{
+    /* width: 100%; */
+    /* background: #000; */
+}
+.commentor-name{
+    color: #17a2b8;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-weight: 400;
+}
+.actual-comment{
+    /* overflow: auto; */
+    color: #17a2b8;
+    margin-top: 5px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 15px;
+}

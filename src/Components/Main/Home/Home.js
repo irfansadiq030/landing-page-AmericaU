@@ -4,6 +4,7 @@ import HomepageTabs from './HomepageTabs/HomepageTabs';
 import './Home.css'
 import './MobileHeader.css'
 import MobileHeader from '../MobileHeader/MobileHeader';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -43,7 +44,7 @@ const Home = () => {
                     <h1 className="latest-blogs-heading">Latest Blogs & Updates</h1>
                     <div className="read-more-btn-container">
                         <img className='readmore-btn-img' src="images/Portal_btnOrange.png" alt="" />
-                        <a href="/" className="read-more-btntext">Read More</a>
+                        <Link to="/blog" className="read-more-btntext">Read More</Link>
                     </div>
                 </div>
 
