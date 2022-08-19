@@ -11,6 +11,7 @@
     justify-content: space-around;
     position: fixed;
     z-index: 10;
+    overflow: auto;
 }
 
 .logo-nav-container {
@@ -105,6 +106,17 @@
 }
 /* Responsiveness */
 
+@media screen and (max-height:400px) {
+    .logo-nav-container {
+        height: 100%;
+        margin-top: 300px;
+    }
+    .sidebar-footer-container{
+        height: 100%;
+        margin-top: 30px;
+    }
+}
+
 @media screen and (max-width:580px) {
     .sidebar-container{
         width: 180px !important;
@@ -119,6 +131,7 @@
     .portal-container{
         font-size: 16px !important;
     }
+    
 }
 
 @media screen and (max-width:800px) {

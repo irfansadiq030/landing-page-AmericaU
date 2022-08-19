@@ -22,7 +22,7 @@ const BlogDetail = () => {
                     tell them! If someone does something awesome, tell them!
                 </p>
                 <p>
-                    <iframe width="70%" height="400px" src="https://www.youtube.com/embed/Z2lw8jjry3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe className='videoIframe' height="400px" src="https://www.youtube.com/embed/Z2lw8jjry3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </p>
                 <p>Have you ever heard the saying, “if you don’t have anything nice to say,
                     don’t say anything at all?”</p>

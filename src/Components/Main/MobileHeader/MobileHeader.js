@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { GlobalInfo } from '../../../App';
 import { Link } from 'react-router-dom';
+import './MobileHeader.css'
 
 const MobileHeader = () => {
     const { sidebar, HideSidebar } = useContext(GlobalInfo);

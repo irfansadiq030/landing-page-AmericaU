@@ -2,7 +2,6 @@ import React from 'react'
 import BlogSlider from './BlogSlider/BlogSlider'
 import HomepageTabs from './HomepageTabs/HomepageTabs';
 import './Home.css'
-import './MobileHeader.css'
 import MobileHeader from '../MobileHeader/MobileHeader';
 import { Link } from 'react-router-dom';
 
