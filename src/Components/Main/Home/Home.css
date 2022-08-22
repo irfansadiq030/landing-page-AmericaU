@@ -145,7 +145,7 @@
         min-height: 700px;
     }
     .latest-blogs-heading{
-        width: 380px;
+        width: 380px !important;
     }
 }
 

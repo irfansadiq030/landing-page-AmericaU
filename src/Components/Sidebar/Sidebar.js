@@ -6,20 +6,20 @@ import { Link } from "react-router-dom";
 
 
 const Sidebar = () => {
-    const { sidebar } = useContext(GlobalInfo);
+    const { sidebar, HideSidebar } = useContext(GlobalInfo);
     return (
         <>
             <div style={sidebar ? { display: 'flex' } : {}} className='sidebar-container'>
                 <div className='logo-nav-container'>
                     <div className="logo-container">
-                        <Link to="/"> <img className='logo-img' src="images/logo.png" alt="" /> </Link>
+                        <Link onClick={() => HideSidebar(sidebar)} to="/"> <img className='logo-img' src="images/logo.png" alt="" /> </Link>
                     </div>
                     <Navmenu />
                 </div>
 
                 <div className='sidebar-footer-container'>
                     <div className="meet-heroes-img-container">
-                        <Link to="/meet-the-heroes">
+                        <Link onClick={() => HideSidebar(sidebar)} to="/meet-the-heroes">
                             <img className='meet-heroes-img' src="images/meethHeroes.jpg" alt="" />
                         </Link>
                     </div>

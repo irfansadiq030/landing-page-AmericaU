@@ -201,4 +201,8 @@
     .blogDetail-container{
         margin-left: 315px;
     }
+    .blog_txt_container{
+        width: 990px;
+        margin: 0 auto;
+    }
 }

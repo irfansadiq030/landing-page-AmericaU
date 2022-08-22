@@ -145,7 +145,7 @@ const MeetHeroes = () => {
                 <div className="left-arrow-container">
                     <img className='slider-arrow' onClick={sliderRef?.slickNext} src="images/icon-back.png" alt="" />
                 </div>
-                <Slider ref={setSliderRef} {...settings}>
+                <Slider dots ref={setSliderRef} {...settings}>
                     {/* <div className="meetHeroes-slide">
                         <img loading="lazy" className='heroes-img-collection' src='images/meet-heroes/Firewall-min.png' alt="" />
                         <div className="heroes-video">

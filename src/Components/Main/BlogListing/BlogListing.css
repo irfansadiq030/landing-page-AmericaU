@@ -85,12 +85,22 @@
 
 /* Mobile Responsiveness */
 
+@media screen and (max-height:400px) {
+    .blog-img-container{
+        width: 350px !important;
+    }
+    .blogContent-container{
+        text-align: center;
+    }
+}
+
 @media screen and (max-width:800px) {
     .blogList-container{
         margin: 0 !important;
     }
     .blogcard{
         flex-direction: column;
+        align-items: center;
     }
     .blog-img-container{
         width: 100%;
