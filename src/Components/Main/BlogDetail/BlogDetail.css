@@ -102,20 +102,23 @@
     color: #fff;
     cursor: pointer;
 }
-.commentsCount{
+
+.commentsCount {
     font-family: Arial;
     font-weight: 500;
     padding-bottom: 10px;
     border-bottom: 3px solid white;
     margin-bottom: 15px;
 }
-.commentList-container{
+
+.commentList-container {
     width: 100%;
     background: #fff;
     /* padding: 10px; */
     margin-top: 50px;
 }
-.commentDetail-container{
+
+.commentDetail-container {
     width: 100%;
     background: #eef7ff;
     padding: 20px;
@@ -123,7 +126,8 @@
     margin-bottom: 10px;
     /* justify-content: space-between; */
 }
-.commentor-imgContainer{
+
+.commentor-imgContainer {
     width: 70px;
     height: 70px;
     border: 2px solid #17a2b8;
@@ -135,74 +139,104 @@
     align-items: center;
     margin-bottom: 10px;
 }
-.comment-time{
+
+.comment-time {
     color: #17a2b8;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
-.commentData{
+
+.commentData {
     display: flex;
     flex-direction: column;
     margin-left: 20px;
     /* background: #000; */
 }
-.commenter-info{
+
+.commenter-info {
     /* width: 100%; */
     /* background: #000; */
 }
-.commentor-name{
+
+.commentor-name {
     color: #17a2b8;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-weight: 400;
 }
-.actual-comment{
+
+.actual-comment {
     /* overflow: auto; */
     color: #17a2b8;
     margin-top: 5px;
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     font-size: 15px;
 }
-.videoIframe{
+
+.videoIframe {
     width: 70% !important;
 }
 
 /* Mobile Responsive */
 @media screen and (max-width:800px) {
-    .blogDetail-container{
+    .blogDetail-container {
         margin: 0 !important;
     }
-    .blogDetail-main-img{
+
+    .blogDetail-main-img {
         width: 90%;
     }
-    .commentDetail-container{
+
+    .commentDetail-container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    .commentData{
+
+    .commentData {
         align-items: center;
         margin-left: 0;
-        margin-top:10px;
+        margin-top: 10px;
     }
-    .actual-comment{
+
+    .actual-comment {
         text-align: center;
     }
-    .videoIframe{
+
+    .videoIframe {
         width: 100% !important;
     }
 }
+
 @media screen and (max-width:1100px) {
 
-    .blogDetail-container{
+    .blogDetail-container {
         margin-left: 245px;
     }
 }
 
 @media screen and (min-width:1440px) {
-    .blogDetail-container{
+    .blogDetail-container {
         margin-left: 315px;
     }
-    .blog_txt_container{
+
+    .blogDetail-content-container {
+        width: 70%;
+    }
+
+    .blogComment-container {
+        width: 70%;
+    }
+
+    .blogDetail-main-img {
+        width: 70%;
+    }
+
+}
+
+@media screen and (min-width:1700px) {
+    .blog_txt_container {
         width: 990px;
         margin: 0 auto;
     }
+    
+    
 }
