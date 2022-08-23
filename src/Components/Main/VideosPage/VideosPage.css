@@ -1,0 +1,149 @@
+.videosPage-container{
+    background-image: url('../../../../public/images/pages-bg.jpg');
+    width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position:bottom;
+    background-repeat: repeat;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    margin-left: 250px;
+    overflow: auto;
+
+}
+
+.vidoesContent-container{
+    width: 95%;
+    /* height: 50vh; */
+    background: #00a0c7;
+    margin: 0px auto 50px auto;
+    border: 5px solid #fff;
+    display: flex;
+    /* flex-direction: column; */
+    padding: 10px 30px;
+}
+.videos-IframeContainer{
+    /* background: #000; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.videos-row{
+    display: flex;
+    flex-direction: column;
+}
+.visitUs-iconContainer{
+    width: 100%;
+    /* background: #fff; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.heroes-newsContainer{
+    display: flex;
+    flex-direction: column;
+}
+.heroesNews-video{
+    width: 430px;
+    height: 245px;
+    background: transparent;
+
+}
+.heroesNews-video{
+    margin-right: 10px;
+}
+.videos-title{
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 25px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+.visitUs-on-title{
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-top: 30px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+/* Mobile Responsive */
+
+/* For Landscape View of Mobile */
+
+@media screen and (min-width:400px) {
+    .heroes-newsContainer{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .videosPage-container {
+        margin: 0 !important;
+    }
+    .vidoesContent-container{
+        /* flex-direction: column; */
+        width: 100%;
+        flex-direction: column-reverse;
+        padding: 0px 0px 30px 0px;
+        /* margin: 0; */
+
+    }
+    .videos-IframeContainer{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .visitUs-iconContainer{
+        justify-content: center;
+        align-items: center;
+    }
+    .heroesNews-video{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+
+    .videosPage-container {
+        margin-left: 245px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .videosPage-container {
+        margin-left: 315px;
+    }
+
+    
+
+}
+
+@media screen and (min-width:1700px) {
+    .blog_txt_container {
+        width: 990px;
+        margin: 0 auto;
+    }
+    
+    
+}
