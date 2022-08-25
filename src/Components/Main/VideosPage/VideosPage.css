@@ -1,9 +1,9 @@
-.videosPage-container{
+.videosPage-container {
     background-image: url('../../../../public/images/pages-bg.jpg');
     width: 100%;
     min-height: 100%;
     background-size: cover;
-    background-position:bottom;
+    background-position: bottom;
     background-repeat: repeat;
     width: 100%;
     height: 100%;
@@ -14,7 +14,7 @@
 
 }
 
-.vidoesContent-container{
+.vidoesContent-container {
     width: 95%;
     /* height: 50vh; */
     background: #00a0c7;
@@ -24,17 +24,20 @@
     /* flex-direction: column; */
     padding: 10px 30px;
 }
-.videos-IframeContainer{
+
+.videos-IframeContainer {
     /* background: #000; */
     width: 100%;
     display: flex;
     justify-content: space-between;
 }
-.videos-row{
+
+.videos-row {
     display: flex;
     flex-direction: column;
 }
-.visitUs-iconContainer{
+
+.visitUs-iconContainer {
     width: 100%;
     /* background: #fff; */
     display: flex;
@@ -42,20 +45,24 @@
     align-items: flex-end;
     flex-direction: column;
 }
-.heroes-newsContainer{
+
+.heroes-newsContainer {
     display: flex;
     flex-direction: column;
 }
-.heroesNews-video{
+
+.heroesNews-video {
     width: 430px;
     height: 245px;
     background: transparent;
 
 }
-.heroesNews-video{
+
+.heroesNews-video {
     margin-right: 10px;
 }
-.videos-title{
+
+.videos-title {
     text-shadow: -1px 1px 2px #000,
         1px 3px 2px #000,
         1px -1px 0 #000,
@@ -69,7 +76,8 @@
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
-.visitUs-on-title{
+
+.visitUs-on-title {
     text-shadow: -1px 1px 2px #000,
         1px 3px 2px #000,
         1px -1px 0 #000,
@@ -91,7 +99,7 @@
 /* For Landscape View of Mobile */
 
 @media screen and (min-width:400px) {
-    .heroes-newsContainer{
+    .heroes-newsContainer {
         width: 80%;
     }
 }
@@ -100,7 +108,14 @@
     .videosPage-container {
         margin: 0 !important;
     }
-    .vidoesContent-container{
+}
+
+@media screen and (max-width:1320px) {
+
+    /* .videosPage-container {
+        margin: 0 !important;
+    } */
+    .vidoesContent-container {
         /* flex-direction: column; */
         width: 100%;
         flex-direction: column-reverse;
@@ -108,16 +123,19 @@
         /* margin: 0; */
 
     }
-    .videos-IframeContainer{
+
+    .videos-IframeContainer {
         flex-direction: column;
-        justify-content: center;
-        align-items:center;
-    }
-    .visitUs-iconContainer{
         justify-content: center;
         align-items: center;
     }
-    .heroesNews-video{
+
+    .visitUs-iconContainer {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroesNews-video {
         width: 100%;
     }
 
@@ -135,7 +153,7 @@
         margin-left: 315px;
     }
 
-    
+
 
 }
 
@@ -144,6 +162,15 @@
         width: 990px;
         margin: 0 auto;
     }
-    
-    
+
+    .heroes-newsContainer {
+        margin: 0px 50px;
+    }
+
+    .heroesNews-video {
+        width: 550px;
+        height: 300px;
+    }
+
+
 }
