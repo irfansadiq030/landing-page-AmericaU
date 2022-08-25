@@ -113,12 +113,13 @@
     /* background: #000; */
     margin: 10px auto 0px auto;
     /* display: flex; */
+    text-align: center;
 }
 .heroName{
-    /* text-shadow: -2px 2px 2px #000,
+    text-shadow: -2px 2px 2px #000,
         2px 1px 2px #000,
         1px -1px 0 #000,
-        -2px -1px 0 #000; */
+        -2px -1px 0 #000;
     color: #fff;
     font-family: 'Acme';
     font-size: 25px;
