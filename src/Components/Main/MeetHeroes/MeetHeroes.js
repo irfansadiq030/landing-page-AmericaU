@@ -98,7 +98,7 @@ const heroesNames = [
     'Deep Blue', 'Gold Angel', 'Chanchito', 'Arskeed',
     'Denzillion ', 'Count Dinero', 'Detective Mr. E', 'Kid Einstein', 'General Washington',
     'Mighty Chondrian', 'Tri-Guy', 'Iron Hammer & The Young Builders', 'Re-Pete', 'Bullseye Bot',
-    'Karmzah ', 'Deedles ', 'Master Hearme Longwind'
+    'Karmzah ', 'Deedles '
 ];
 const MeetHeroes = () => {
     const [heroName, setHeroName] = useState(true);
@@ -152,7 +152,7 @@ const MeetHeroes = () => {
                     })
                 }
 
-                {/* <span className="heroName">Irfan | </span> */}
+                <span onClick={()=>slideGoto(20)} className="heroName">Master Hearme Longwind </span>
             </div>
             <div className="heroes-data-container">
                 <div className="left-arrow-container">
