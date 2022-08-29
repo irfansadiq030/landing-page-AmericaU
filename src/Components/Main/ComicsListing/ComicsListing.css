@@ -1,0 +1,128 @@
+
+.comicsCard-container{
+    width: 90%;
+    margin:0px auto 0px auto;
+    /* background: #000; */
+}
+.comicsCard{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+
+}
+.comicsCard:last-child{
+    border-bottom: 0;
+}
+.blogcard2{
+    padding-top: 30px;
+}
+.comics-img-container{
+    width: 90%;
+    height: 350px;
+    object-fit: contain;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.comicsListing-thumbnail{
+    width: 98%;
+    height: 100%;
+    object-fit: contain;
+}
+.comicsContent-container{
+    padding-left: 20px;
+}
+.comicsListing-title{
+    font-family: 'Brady Bunch Remastered';
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffb400;
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+.comics-description{
+    font-family: 'Arial';
+    color: #000;
+    font-size: 18px;
+    line-height: 25px;
+    padding-top: 15px;
+    padding-right: 20px;
+}
+.blog-pagintaion{
+    width: 90%;
+    /* background: #000; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px auto;
+}
+.blog-left-arrow{
+    margin-right: 15px;
+    cursor: pointer;
+}
+.blog-right-arrow{
+    margin-left: 15px;
+    cursor: pointer;
+
+}
+.comicsTitle-link{
+    text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+
+@media screen and (max-height:400px) {
+    .comics-img-container{
+        width: 350px !important;
+    }
+    .comicsContent-container{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .blogList-container{
+        margin: 0 !important;
+    }
+    .comicsCard{
+        flex-direction: column;
+        align-items: center;
+    }
+    .comics-img-container{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .comicsContent-container{
+        padding-left: 0;
+        text-align: center;
+    }
+    .blog-pagintaion{
+        justify-content: center;
+    }
+}
+@media screen and (max-width:1100px) {
+
+    .blogList-container{
+        margin-left: 245px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .blogList-container{
+        margin-left: 315px;
+    }
+    .comics-img-container{
+        width: 100%;
+    }
+}   
+@media screen and (min-width:1700px) {
+   
+    .comics-img-container{
+        width: 60%;
+    }
+}   

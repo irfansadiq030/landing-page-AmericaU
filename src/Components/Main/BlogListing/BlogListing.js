@@ -1,7 +1,7 @@
 import React from 'react'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import './BlogListing.css'
-import PageTitle from '../MeetHeroes/PageTitle/PageTitle'
+import PageTitle from '../PageTitle/PageTitle'
 import { Link } from 'react-router-dom'
 
 const blogData = [

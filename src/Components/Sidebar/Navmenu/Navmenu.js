@@ -13,7 +13,7 @@ const Navmenu = () => {
         <li><NavLink to='/events'>Events</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/videos'>Videos</NavLink></li>
         <li><NavLink to='/games'>Games</NavLink></li>
-        <li><NavLink to='/comics'>Comics</NavLink></li>
+        <li><NavLink onClick={() => HideSidebar(sidebar)} to='/comics'>Comics</NavLink></li>
         <li><NavLink to='/leaper'>LeaperBoard</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/blog'>Blog</NavLink></li>
       </ul>

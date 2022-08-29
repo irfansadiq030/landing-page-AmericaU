@@ -56,39 +56,6 @@
     top: -170px;
 }
 
-.heroes-name-container li {
-    text-shadow: -2px 2px 2px #000,
-        2px 1px 2px #000,
-        1px -1px 0 #000,
-        -2px -1px 0 #000;
-    background: #FF8500;
-    width: 130px;
-    color: #fff;
-    font-family: 'Acme';
-    font-size: 20px;
-    margin: 3px;
-    text-align: center;
-    text-transform: capitalize;
-    height: 25px;
-
-}
-
-.heroes-name-container li:nth-child(13n) {
-    width: 200px;
-}
-
-.heroes-name-container li:nth-child(14n) {
-    width: 200px;
-}
-
-.heroes-name-container li:nth-child(16n) {
-    width: 300px;
-}
-
-.heroes-name-container li:nth-child(21n) {
-    width: 250px;
-}
-
 .heroes-img-collection {
     width: 100%;
     /* background: #000; */
@@ -107,7 +74,7 @@
 
 /* New Style */
 
-.heroName-container{
+.heroName-container {
     width: 80%;
     max-height: 200px;
     /* background: #000; */
@@ -115,11 +82,12 @@
     /* display: flex; */
     text-align: center;
 }
-.heroName{
+
+.heroName {
     text-shadow: -1px 1px 2px #000,
-				  1px 3px 2px #000,
-				  1px -1px 0 #000,
-				  -1px -1px 0 #000;
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
     color: #fff;
     font-family: 'Acme';
     font-size: 25px;
@@ -130,9 +98,59 @@
 
 }
 
+.hero-dropdown-nameContainer {
+    display: none;
+}
+
 
 
 /* Mobile Responsive */
+
+@media screen and (max-width:600px) {
+    .hero-dropdown-nameContainer {
+        justify-content: center;
+        margin: 0 auto;
+        display: flex;
+        background: #fff;
+        align-items: center;
+        width: 80%;
+        height: 50px;
+
+    }
+    .namedrop-down{
+        /* padding: 10px; */
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Acme';
+    font-size: 15px;
+    word-spacing: 2px;
+    border: 0px;
+    margin-top: 10px;
+    border-radius: 2px;
+    position: relative;
+    }
+    .namedrop-down:focus-visible{outline: 0;}
+    .hrn-dropdown-icon{
+        text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    right: 60px;
+    position: absolute;
+    }
+
+    .heroName-container {
+        display: none;
+    }
+}
+
 @media screen and (max-width:800px) {
     .meetHeroes-container {
         margin: 0 !important;

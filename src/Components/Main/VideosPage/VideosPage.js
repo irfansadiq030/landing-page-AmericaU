@@ -1,7 +1,7 @@
 import React from 'react'
 import './VideosPage.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
-import PageTitle from '../MeetHeroes/PageTitle/PageTitle'
+import PageTitle from '../PageTitle/PageTitle'
 
 const VideosPage = () => {
     return (

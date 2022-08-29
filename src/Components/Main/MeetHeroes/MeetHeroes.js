@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './MeetHeroes.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
-import PageTitle from './PageTitle/PageTitle'
+import PageTitle from '../PageTitle/PageTitle'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -153,6 +153,22 @@ const MeetHeroes = () => {
                 }
 
                 <span onClick={()=>slideGoto(20)} className="heroName">Master Hearme Longwind </span>
+            </div>
+            <div className="hero-dropdown-nameContainer">
+                <select onChange={e => slideGoto(e.target.value)} className='namedrop-down'>
+                    <option selected disabled>Select Hero Name</option>
+                    {
+                    heroesNames.map((name,index) => {
+                        return (
+                            <option value={index}> {name} </option>
+                        )
+                    })
+                }
+                    {/* <option value="1">Dean Archer</option>
+                    <option value="1">Mental Ninja</option> */}
+                    
+                </select>
+                <i class="fa-solid fa-chevron-down hrn-dropdown-icon"></i>
             </div>
             <div className="heroes-data-container">
                 <div className="left-arrow-container">

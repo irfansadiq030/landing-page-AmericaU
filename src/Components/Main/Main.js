@@ -6,7 +6,8 @@ import { Routes, Route } from 'react-router-dom'
 import BlogListing from './BlogListing/BlogListing';
 import BlogDetail from './BlogDetail/BlogDetail';
 import VideosPage from './VideosPage/VideosPage';
-
+import Comics from './Comics/Comics';
+import ComicsListing from './ComicsListing/ComicsListing';
 const Main = () => {
   return (
     <>
@@ -16,6 +17,8 @@ const Main = () => {
         <Route path="/blog" element={<BlogListing />} />
         <Route path="/blog-detail" element={<BlogDetail />} />
         <Route path="/videos" element={<VideosPage />} />
+        <Route path="/comics" element={<Comics />} />
+        <Route path="/comics-list" element={<ComicsListing />} />
       </Routes>
     </>
   )
