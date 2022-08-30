@@ -11,12 +11,12 @@
     border-bottom: 3px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin: auto;
+    margin:0px auto 20px auto;
 
 }
-.comicsCard:last-child{
+/* .comicsCard:last-child{
     border-bottom: 0;
-}
+} */
 .blogcard2{
     padding-top: 30px;
 }

@@ -131,4 +131,17 @@
     .comics-container {
         margin-left: 315px;
     }
+    .comics-data-container{
+        height: 85vh;
+    }
+    .comics-card{
+        width: 470px;
+        height: 100%;
+    }
+    .comics-coverimg{
+        width: 90%;
+    }
+    .readmore-comics-btn {
+        margin-top: 40px;
+    }
 }

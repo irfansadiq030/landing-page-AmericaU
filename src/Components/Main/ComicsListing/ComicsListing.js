@@ -67,6 +67,10 @@ const ComicsListing = () => {
                     )
                 })
             }
+            <div className="blog-pagintaion">
+                <img className='blog-left-arrow' src="images/blog-left-arrow.png" alt="" />
+                <img className='blog-right-arrow' src="images/blog-right-arrow.png" alt="" />
+            </div>
 
         </div>
     )
