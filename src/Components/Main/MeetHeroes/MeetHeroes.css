@@ -109,41 +109,46 @@
 @media screen and (max-width:600px) {
     .hero-dropdown-nameContainer {
         justify-content: center;
-        margin: 0 auto;
+        margin: 10px auto 0px auto;
         display: flex;
         background: #fff;
         align-items: center;
-        width: 80%;
+        width: 70%;
         height: 50px;
-
+        border: 3px solid black;
     }
-    .namedrop-down{
-        /* padding: 10px; */
+
+    .namedrop-down {
+        padding-left: 30px;
         width: 100%;
         height: 100%;
         background: transparent;
         text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    color: #fff;
-    font-family: 'Acme';
-    font-size: 15px;
-    word-spacing: 2px;
-    border: 0px;
-    margin-top: 10px;
-    border-radius: 2px;
-    position: relative;
+            1px 3px 2px #000,
+            1px -1px 0 #000,
+            -1px -1px 0 #000;
+        color: #fff;
+        font-family: 'Acme';
+        font-size: 15px;
+        word-spacing: 2px;
+        border: 0px;
+        /* margin-top: 5px; */
+        border-radius: 2px;
+        position: relative;
     }
-    .namedrop-down:focus-visible{outline: 0;}
-    .hrn-dropdown-icon{
+
+    .namedrop-down:focus-visible {
+        outline: 0;
+    }
+
+    .hrn-dropdown-icon {
         text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    color: #fff;
-    right: 60px;
-    position: absolute;
+            1px 3px 2px #000,
+            1px -1px 0 #000,
+            -1px -1px 0 #000;
+        color: #fff;
+        right: 100px;
+        position: absolute;
     }
 
     .heroName-container {
