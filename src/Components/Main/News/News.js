@@ -11,7 +11,7 @@ const News = () => {
             <div className="newspg-main">
                 <div className="newspg-content-container">
                     <div className="newspg-main-imgcontainer">
-                        <img className='newspg-main-img' src="images/chinese new year.jpg" alt="news main image" />
+                        <img className='newspg-main-img' src="images/chinese new year.jpg" alt="news main thumbnail" />
                     </div>
                     <div className="newspg-description-container">
                         <p className="newspg-dscrp">
