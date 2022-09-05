@@ -43,8 +43,10 @@ const News = () => {
                     </div>
                 </div>
                 <div className="moreNews-sidebar-container">
+                    <img className='moreNews-topIcon' src="images/icon-back.png" alt="" />
                     <img className='moreNews-sidebar-img' src="images/moreNewsSidebar.png" alt="" />
                     <div className="moreNews-listContainer">
+                        
                         <h3 className="morenews-title">More</h3>
                         <div className="moreNewsitemContainer">
                             <div className="moreNews-item">
@@ -64,6 +66,7 @@ const News = () => {
                             </div>
                         </div>
                     </div>
+                    <img className='moreNews-backIcon' src="images/icon-back.png" alt="" />
                 </div>
             </div>
 

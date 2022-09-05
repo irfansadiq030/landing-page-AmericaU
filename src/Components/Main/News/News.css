@@ -67,6 +67,30 @@
     position: relative;
 }
 
+.moreNews-topIcon {
+    position: absolute;
+    top: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transform: rotate(85deg);
+    z-index: 22;
+    cursor: pointer;
+}
+
+.moreNews-backIcon {
+    position: absolute;
+    bottom: -15px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    transform: rotate(-95deg);
+    z-index: 22;
+    cursor: pointer;
+}
+
 .moreNews-sidebar-img {
     width: 99%;
     height: 99%;

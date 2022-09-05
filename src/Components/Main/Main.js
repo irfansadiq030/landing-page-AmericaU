@@ -9,6 +9,7 @@ import VideosPage from './VideosPage/VideosPage';
 import Comics from './Comics/Comics';
 import ComicsListing from './ComicsListing/ComicsListing';
 import News from './News/News';
+import Games from './Games/Games';
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <Route path="/comics" element={<Comics />} />
         <Route path="/comics-list" element={<ComicsListing />} />
         <Route path="/news" element={<News />} />
+        <Route path="/games" element={<Games />} />
       </Routes>
     </>
   )
