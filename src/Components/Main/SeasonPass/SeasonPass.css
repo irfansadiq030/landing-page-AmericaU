@@ -1,0 +1,248 @@
+.seasonPs-container {
+    background-image: url('../../../../public/images/comics-bg.jpg');
+    /* background: #00a0c7; */
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    width: 100%;
+    /* height: 100%; */
+    color: #fff;
+    position: relative;
+    margin-left: 250px;
+    overflow: auto;
+}
+
+.seasonPs-content-container {
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+}
+
+.seasonPs-sidebar {
+    width: 25%;
+    height: 80vh;
+    background-color: #e4e4e4a2;
+    margin: 0 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.seasonPs-main {
+    width: 70%;
+    min-height: 100%;
+    background: #00a0c7;
+    border: 5px solid #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* position: absolute;
+    top: 30px;
+    right: 10px; */
+}
+
+.season-title {
+    font-family: 'Brady Bunch Remastered';
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    word-spacing: 2.5px;
+}
+
+.seasonPs-desc-container {
+    width: 100%;
+    height: 100%;
+    /* background-color: #00a0c7; */
+    margin-top: 10px;
+    overflow: auto;
+}
+
+.seasonPs-descrp {
+    font-size: 17px;
+    font-family: 'Acme';
+    color: #000;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 15px 0px;
+}
+
+/* Season Pass Main content Style */
+
+.seasonPs-newTag {
+    width: 100px;
+    height: 40px;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #18ff00;
+    font-family: 'Acme';
+    font-size: 25px;
+    text-transform: uppercase;
+    transform: rotate(-10deg);
+    margin-left: -5px;
+    left: 0;
+    top: 0;
+    font-weight: 400;
+    position: absolute;
+}
+
+.activeSeasonPs-data {
+    /* margin-top: 10px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 10px auto;
+    /* background: #000; */
+    /* text-align: center; */
+}
+
+.active-seasonPs-title {
+    font-size: 20px;
+    font-family: 'Acme';
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    margin-right: 20px;
+    /* background-color: #18ff00; */
+    max-width: 350px;
+    text-align: center;
+}
+
+.seasonPs-date {
+    font-size: 18px;
+    font-family: 'Acme';
+    text-transform: capitalize;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    margin-right: 20px;
+    min-width: 100px;
+}
+
+.seasonPs-main-img {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.latestSeasonStories-container {
+    width: 100%;
+    height: 200px;
+    /* background-color: #18ff00; */
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.seasonItme-img {
+    width: 230px;
+}
+
+.latestSeasonPs-data {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* background: #000; */
+}
+
+.seasonPs-item-title {
+    font-size: 13px;
+    font-family: 'Acme';
+    text-transform: uppercase;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    min-width: 100px;
+}
+
+.seasonPs-item-date {
+    font-size: 13px;
+    font-family: 'Acme';
+    text-transform: capitalize;
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+}
+
+.readmore-seasonStories-btn {
+    width: 150px;
+    height: 50px;
+    background-image: url('../../../../public/images/portal-btn.png');
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* position: relative; */
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    /* Fonts */
+    text-shadow: -1px 1px 2px #000,
+        1px 3px 2px #000,
+        1px -1px 0 #000,
+        -1px -1px 0 #000;
+    color: #fff;
+    font-family: 'Brady Bunch Remastered';
+    font-size: 30px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width:800px) {
+    .seasonPs-container {
+        margin: 0 !important;
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+
+    .seasonPs-container {
+        margin-left: 245px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .seasonPs-container {
+        margin-left: 315px;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .seasonPs-sidebar {
+        width: 20%;
+    }
+
+    .seasonPs-descrp {
+        font-size: 18px;
+    }
+
+    .activeSeasonPs-data {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .seasonPs-main-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
