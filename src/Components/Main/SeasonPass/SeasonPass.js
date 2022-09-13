@@ -72,7 +72,7 @@ const SeasonPass = () => {
                         </div>
                         
                     </div>
-                    <Link to="/comics-list" className="readmore-seasonStories-btn">
+                    <Link to="/seasonpass-list" className="readmore-seasonStories-btn">
                         Read More
                     </Link>
                 </div>

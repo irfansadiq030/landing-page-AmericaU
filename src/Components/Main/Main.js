@@ -12,6 +12,7 @@ import News from './News/News';
 import Games from './Games/Games';
 import SeasonPass from './SeasonPass/SeasonPass';
 import SeasonPassStories from './SeasonPassStories/SeasonPassStories';
+import Events from './Events/Events'
 
 const Main = () => {
   return (
@@ -26,8 +27,9 @@ const Main = () => {
         <Route path="/comics-list" element={<ComicsListing />} />
         <Route path="/news" element={<News />} />
         <Route path="/games" element={<Games />} />
-        <Route path="/seasonpass" element={<SeasonPassStories />} />
-        <Route path="/seasonpass-detail" element={<SeasonPass />} />
+        <Route path="/seasonpass" element={<SeasonPass />} />
+        <Route path="/seasonpass-list" element={<SeasonPassStories />} />
+        <Route path="/events" element={<Events />} />
       </Routes>
     </>
   )

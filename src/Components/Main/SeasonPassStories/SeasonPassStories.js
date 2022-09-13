@@ -64,7 +64,7 @@ const SeasonPassStories = () => {
                                   <img className='bloListing-thumbnail' src={`images/${season.img}`} alt="blog thumbnail" />
                               </div>
                               <div className="blogContent-container">
-                                  <Link className="blogtitle-link" to="/seasonpass-detail"><h1 className="blogListing-title">{season.title}</h1></Link>
+                                  <Link className="blogtitle-link" to="/seasonpass-list"><h1 className="blogListing-title">{season.title}</h1></Link>
                                   <p className="blog-date">{season.blogDate} </p>
                                   <p className="blog-description">
                                       {season.description}
