@@ -204,12 +204,15 @@
         /* background: #000; */
         z-index: 30;
         display: block;
+        top: 20px;
+        left: 17px;
     }
 
-    .mobileSlide-newsImg{
-        width: 100%;
+    .mobileSlide-newsImg {
+        width: 90% !important;
         height: 100%;
     }
+
 }
 
 @media screen and (max-width:1100px) {

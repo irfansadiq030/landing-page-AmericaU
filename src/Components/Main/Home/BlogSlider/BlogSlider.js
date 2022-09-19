@@ -55,7 +55,7 @@ const BlogSlider = () => {
 
             <div className="blog-container">
                 <div className="left-arrow-container">
-                    <img className='slider-arrow' onClick={sliderRef?.slickNext} src="images/icon-back.png" alt="" />
+                    <img className='slider-arrow' onClick={sliderRef?.slickPrev} src="images/icon-back.png" alt="" />
                 </div>
 
                 <Slider ref={setSliderRef} {...settings}>
@@ -99,7 +99,7 @@ const BlogSlider = () => {
                 </Slider>
 
                 <div className="right-arrow-container">
-                    <img className='slider-arrow' onClick={sliderRef?.slickPrev} src="images/icon-next.png" alt="" />
+                    <img className='slider-arrow' onClick={sliderRef?.slickNext} src="images/icon-next.png" alt="" />
                 </div>
             </div>
 
