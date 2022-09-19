@@ -283,7 +283,6 @@
         .latestSeasonStories-container {
             width: 80%;
             margin: 20px auto;
-            flex-direction: column;
         }
 
         .readmore-seasonStories-btn {

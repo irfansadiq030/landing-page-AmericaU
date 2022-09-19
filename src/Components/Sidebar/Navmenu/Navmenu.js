@@ -9,8 +9,8 @@ const Navmenu = () => {
     <nav className='nav-bar'>
       <ul className='nav-NavLinks-container'>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/news'>News</NavLink></li>
-        <li><NavLink to='/seasonpass'>Season Pass</NavLink></li>
-        <li><NavLink to='/events'>Events</NavLink></li>
+        <li><NavLink onClick={() => HideSidebar(sidebar)} to='/seasonpass'>Season Pass</NavLink></li>
+        <li><NavLink onClick={() => HideSidebar(sidebar)} to='/events'>Events</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/videos'>Videos</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/games'>Games</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/comics'>Comics</NavLink></li>
