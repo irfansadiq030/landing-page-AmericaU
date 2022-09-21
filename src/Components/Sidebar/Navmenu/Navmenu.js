@@ -14,7 +14,7 @@ const Navmenu = () => {
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/videos'>Videos</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/games'>Games</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/comics'>Comics</NavLink></li>
-        <li><NavLink to='/leaper'>LeaderBoard</NavLink></li>
+        <li><NavLink onClick={() => HideSidebar(sidebar)} to='/leaderboard'>LeaderBoard</NavLink></li>
         <li><NavLink onClick={() => HideSidebar(sidebar)} to='/blog'>Blog</NavLink></li>
       </ul>
     </nav>

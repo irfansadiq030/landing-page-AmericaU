@@ -13,6 +13,7 @@ import Games from './Games/Games';
 import SeasonPass from './SeasonPass/SeasonPass';
 import SeasonPassStories from './SeasonPassStories/SeasonPassStories';
 import Events from './Events/Events'
+import Leaderboard from './Leaderboard/Leaderboard';
 
 const Main = () => {
   return (
@@ -30,6 +31,7 @@ const Main = () => {
         <Route path="/seasonpass" element={<SeasonPass />} />
         <Route path="/seasonpass-list" element={<SeasonPassStories />} />
         <Route path="/events" element={<Events />} />
+        <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
     </>
   )
