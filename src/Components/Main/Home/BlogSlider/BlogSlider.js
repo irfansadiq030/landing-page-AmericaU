@@ -44,9 +44,9 @@ const BlogSlider = () => {
                     slidesToScroll: 1
                 }
             },
-            
-           
-           
+
+
+
         ]
     };
 
@@ -55,41 +55,41 @@ const BlogSlider = () => {
 
             <div className="blog-container">
                 <div className="left-arrow-container">
-                    <img className='slider-arrow' onClick={sliderRef?.slickPrev} src="images/icon-back.png" alt="" />
+                    <img className='slider-arrow' onClick={sliderRef?.slickPrev} src="/images/icon-back.png" alt="" />
                 </div>
 
                 <Slider ref={setSliderRef} {...settings}>
 
                     <div className="blog-box">
-                        <img className='blog-img' src="images/Week 1 Story 2.png" alt="" />
+                        <img className='blog-img' src="/images/Week 1 Story 2.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">Apr 3, 2022</span>
                             <h1 className="blog-title">Season Pass Story Line 2!</h1>
                         </div>
                     </div>
                     <div className="blog-box">
-                        <img className='blog-img' src="images/Heroes News copy.png" alt="" />
+                        <img className='blog-img' src="/images/Heroes News copy.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">June 3, 2022</span>
                             <h1 className="blog-title">HAPPY ST. PATRICK’S DAY!</h1>
                         </div>
                     </div>
                     <div className="blog-box">
-                        <img className='blog-img' src="images/4-29 heroes news.png" alt="" />
+                        <img className='blog-img' src="/images/4-29 heroes news.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">Apr 3, 2022</span>
                             <h1 className="blog-title">HEROES NEWS, NEW AVATARS!</h1>
                         </div>
                     </div>
                     <div className="blog-box">
-                        <img className='blog-img' src="images/slide - hero of the week - master dreamyearth.png" alt="" />
+                        <img className='blog-img' src="/images/slide - hero of the week - master dreamyearth.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">Aug 3, 2022</span>
                             <h1 className="blog-title">Hero of the week Master PR...</h1>
                         </div>
                     </div>
                     <div className="blog-box">
-                        <img className='blog-img' src="images/slide - hero of the week - master dreamyearth.png" alt="" />
+                        <img className='blog-img' src="/images/slide - hero of the week - master dreamyearth.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">Aug 3, 2022</span>
                             <h1 className="blog-title">Hero of the week Master PR...</h1>
@@ -99,7 +99,7 @@ const BlogSlider = () => {
                 </Slider>
 
                 <div className="right-arrow-container">
-                    <img className='slider-arrow' onClick={sliderRef?.slickNext} src="images/icon-next.png" alt="" />
+                    <img className='slider-arrow' onClick={sliderRef?.slickNext} src="/images/icon-next.png" alt="" />
                 </div>
             </div>
 

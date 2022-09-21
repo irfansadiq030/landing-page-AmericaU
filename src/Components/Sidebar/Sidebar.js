@@ -7,12 +7,13 @@ import { Link } from "react-router-dom";
 
 const Sidebar = () => {
     const { sidebar, HideSidebar } = useContext(GlobalInfo);
+
     return (
         <>
             <div style={sidebar ? { display: 'flex' } : {}} className='sidebar-container'>
                 <div className='logo-nav-container'>
                     <div className="logo-container">
-                        <Link onClick={() => HideSidebar(sidebar)} to="/"> <img className='logo-img' src="images/logo.png" alt="" /> </Link>
+                        <Link onClick={() => HideSidebar(sidebar)} to="/"> <img className='logo-img' src="/images/logo.png" alt="" /> </Link>
                     </div>
                     <Navmenu />
                 </div>
