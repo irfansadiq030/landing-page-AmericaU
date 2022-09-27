@@ -1,15 +1,28 @@
 import './App.css';
 import { createContext, useState } from 'react';
 import PublicMain from './Components/Main/PublicMain';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import AdminIndex from './Components/Admin/AdminIndex';
-import Home from './Components/Admin/Home/Home';
-import Blog from './Components/Admin/Blog/Blog';
-import Events from './Components/Admin/Events/Events';
-import Comics from './Components/Admin/Comics/Comics';
-import Videos from './Components/Admin/Videos/Videos';
-import SeasonPass from './Components/Admin/SeasonPass/SeasonPass';
+import AdminHome from './Components/Admin/Home/Home';
+import AdminBlog from './Components/Admin/Blog/Blog';
+import AdminEvents from './Components/Admin/Events/Events';
+import AdminComics from './Components/Admin/Comics/Comics';
+import AdminVideos from './Components/Admin/Videos/Videos';
 
+import MeetHeroes from './Components/Main/MeetHeroes/MeetHeroes';
+import BlogListing from './Components/Main/BlogListing/BlogListing';
+import Leaderboard from './Components/Main/Leaderboard/Leaderboard';
+import SeasonPassStories from './Components/Main/SeasonPassStories/SeasonPassStories';
+import ComicsListing from './Components/Main/ComicsListing/ComicsListing';
+import VideosPage from './Components/Main/VideosPage/VideosPage';
+import BlogDetail from './Components/Main/BlogDetail/BlogDetail';
+import News from './Components/Main/News/News';
+import Games from './Components/Main/Games/Games';
+import SeasonPassMain from './Components/Main/SeasonPass/SeasonPass';
+import AdminSeasonPass from './Components/Admin/SeasonPass/SeasonPass';
+import Home from './Components/Main/Home/Home';
+import Events from './Components/Main/Events/Events';
+import Comics from './Components/Main/Comics/Comics';
 
 export const GlobalInfo = createContext();
 
@@ -25,15 +38,30 @@ function App() {
     <>
       <GlobalInfo.Provider value={{ sidebar: enableSidebar, HideSidebar: HideSidebar }}>
         <Routes>
-          <Route path='/' element={<PublicMain />} />
           <Route path='/admin/' element={<AdminIndex />} >
-            <Route index element={<Home />} />
-            <Route path='videos' element={<Videos />} />
-            <Route path='season-pass' element={<SeasonPass />} />
-            <Route path='comics' element={<Comics />} />
-            <Route path='events' element={<Events />} />
-            <Route path='blog' element={<Blog />} />
+            <Route index element={<AdminHome />} />
+            <Route path='videos' element={<AdminVideos />} />
+            <Route path='season-pass' element={<AdminSeasonPass />} />
+            <Route path='comics' element={<AdminComics />} />
+            <Route path='events' element={<AdminEvents />} />
+            <Route path='blog' element={<AdminBlog />} />
           </Route>
+          <Route path='/' element={<PublicMain />} >
+            <Route path="meet-the-heroes" element={<MeetHeroes />} />
+            <Route path="blog" element={<BlogListing />} />
+            <Route path="blog-detail" element={<BlogDetail />} />
+            <Route path="videos" element={<VideosPage />} />
+            <Route path="comics" element={<Comics />} />
+            <Route path="comics-list" element={<ComicsListing />} />
+            <Route path="news" element={<News />} />
+            <Route path="games" element={<Games />} />
+            <Route path="seasonpass" element={<SeasonPassMain />} />
+            <Route path="seasonpass-list" element={<SeasonPassStories />} />
+            <Route path="events" element={<Events />} />
+            <Route path="leaderboard" element={<Leaderboard />} />
+            <Route index path="/" element={<Home />} />
+          </Route>
+
         </Routes>
       </GlobalInfo.Provider>
     </>
