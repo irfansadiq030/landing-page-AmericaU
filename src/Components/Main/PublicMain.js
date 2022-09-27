@@ -14,10 +14,12 @@ import SeasonPass from './SeasonPass/SeasonPass';
 import SeasonPassStories from './SeasonPassStories/SeasonPassStories';
 import Events from './Events/Events'
 import Leaderboard from './Leaderboard/Leaderboard';
+import Sidebar from './../Sidebar/Sidebar';
 
-const Main = () => {
+const PublicMain = () => {
   return (
-    <>
+    <div className="components-container">
+      <Sidebar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/meet-the-heroes" element={<MeetHeroes />} />
@@ -33,8 +35,8 @@ const Main = () => {
         <Route path="/events" element={<Events />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
       </Routes>
-    </>
+    </div>
   )
 }
 
-export default Main
+export default PublicMain
