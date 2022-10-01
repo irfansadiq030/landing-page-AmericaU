@@ -6,7 +6,6 @@ const BlogForm = () => {
             <form action="#" method="POST">
                 <div className="">
                     <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
-                        
 
                         <div>
                             <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -21,6 +20,24 @@ const BlogForm = () => {
                                     defaultValue={''}
                                 />
                             </div>
+                        </div>
+
+                        <div className=''>
+                            <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
+                                Display On
+                            </label>
+                            <select
+                                id="location"
+                                name="location"
+                                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                                defaultValue="Canada"
+                            >
+                                <option>Only Me</option>
+                                <option>Specific User</option>
+                                <option>Country</option>
+                                <option>State</option>
+                                <option>School</option>
+                            </select>
                         </div>
 
                         <div>

@@ -1,5 +1,6 @@
 import React from 'react'
-import { TrashIcon, PencilAltIcon } from '@heroicons/react/solid'
+import { TrashIcon, PencilAltIcon } from '@heroicons/react/solid';
+
 
 const people = [
     { date: '28/09/2022', img: 'https://placeimg.com/640/480/51', publisher: 'irfansadiq', role: 'Member' },
@@ -34,7 +35,7 @@ const BlogTable = () => {
                                             Published By
                                         </th>
                                         <th scope="col" className="py-3.5 pl-4 pr-4  text-sm font-semibold text-gray-900 sm:pr-6">
-                                            Active
+                                            Status
                                         </th>
                                         <th scope="col" className="py-3.5 pl-4 pr-4  text-sm font-semibold text-gray-900 sm:pr-6">
                                             Order
@@ -54,7 +55,20 @@ const BlogTable = () => {
                                                 <img className='w-20 rounded mx-auto' src={person.img} alt="" />
                                             </td>
                                             <td className="whitespace-nowrap p-4 text-sm text-gray-500">{person.publisher}</td>
-                                            <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">{person.role}</td>
+                                            <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
+                                                <div className="relative flex items-center justify-center">
+                                                    <div className="flex items-center h-5">
+                                                        <input
+                                                            id="comments"
+                                                            aria-describedby="comments-description"
+                                                            name="comments"
+                                                            type="checkbox"
+                                                            className="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                                        />
+                                                    </div>
+                                                    
+                                                </div>
+                                            </td>
                                             <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">{person.role}</td>
                                             <td className="whitespace-nowrap py-4 pl-4 pr-4 text-sm text-gray-500 sm:pr-6">
                                                 <button
