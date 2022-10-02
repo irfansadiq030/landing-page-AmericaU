@@ -8,9 +8,9 @@ import AdminBlog from './Components/Admin/Blog/Blog';
 import AdminEvents from './Components/Admin/Events/Events';
 import AdminComics from './Components/Admin/Comics/Comics';
 import AdminVideos from './Components/Admin/Videos/Videos';
-import EventsTable from './Components/Admin/Events/EventsTable';
 import AddEvents from './Components/Admin/Events/AddEvents';
-
+import AddBlog from './Components/Admin/Blog/AddBlog';
+import AddNewSeason from './Components/Admin/SeasonPass/AddNewSeason';
 
 import MeetHeroes from './Components/Main/MeetHeroes/MeetHeroes';
 import BlogListing from './Components/Main/BlogListing/BlogListing';
@@ -45,11 +45,14 @@ function App() {
             <Route index element={<AdminHome />} />
             <Route path='videos' element={<AdminVideos />} />
             <Route path='season-pass' element={<AdminSeasonPass />} />
+            <Route path='season-pass/add-new' element={<AddNewSeason />} />
             <Route path='comics' element={<AdminComics />} />
             <Route path='events' element={<AdminEvents />} />
             <Route path='events/add-new' element={<AddEvents />} />
             <Route path='blog' element={<AdminBlog />} />
+            <Route path='blog/add-new' element={<AddBlog />} />
           </Route>
+
           <Route path='/' element={<PublicMain />} >
             <Route path="meet-the-heroes" element={<MeetHeroes />} />
             <Route path="blog" element={<BlogListing />} />
