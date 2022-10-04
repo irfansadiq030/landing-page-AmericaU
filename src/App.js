@@ -11,6 +11,7 @@ import AdminVideos from './Components/Admin/Videos/Videos';
 import AddEvents from './Components/Admin/Events/AddEvents';
 import AddBlog from './Components/Admin/Blog/AddBlog';
 import AddNewSeason from './Components/Admin/SeasonPass/AddNewSeason';
+import AddNewComics from './Components/Admin/Comics/AddNewComics';
 
 import MeetHeroes from './Components/Main/MeetHeroes/MeetHeroes';
 import BlogListing from './Components/Main/BlogListing/BlogListing';
@@ -47,6 +48,7 @@ function App() {
             <Route path='season-pass' element={<AdminSeasonPass />} />
             <Route path='season-pass/add-new' element={<AddNewSeason />} />
             <Route path='comics' element={<AdminComics />} />
+            <Route path='comics/add-new' element={<AddNewComics />} />
             <Route path='events' element={<AdminEvents />} />
             <Route path='events/add-new' element={<AddEvents />} />
             <Route path='blog' element={<AdminBlog />} />
