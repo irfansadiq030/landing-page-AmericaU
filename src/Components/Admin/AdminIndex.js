@@ -4,12 +4,12 @@ import {
     BellIcon,
     CalendarIcon,
     ChartBarIcon,
-    FolderIcon,
     HomeIcon,
     InboxIcon,
     MenuAlt2Icon,
     UsersIcon,
     XIcon,
+    NewspaperIcon,
 } from '@heroicons/react/outline'
 import { SearchIcon } from '@heroicons/react/solid'
 import { Outlet } from 'react-router-dom'
@@ -21,7 +21,7 @@ const navigation = [
     { name: 'Events', to: 'events', icon: CalendarIcon },
     { name: 'Videos', to: 'videos', icon: InboxIcon },
     { name: 'Comics', to: 'comics', icon: ChartBarIcon },
-    { name: 'Blog', to: 'blog', icon: FolderIcon, },
+    { name: 'Blog', to: 'blog', icon: NewspaperIcon, },
 ]
 
 const userNavigation = [
