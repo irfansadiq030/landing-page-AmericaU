@@ -1,0 +1,11 @@
+@media screen and (max-width:1440px) {
+    .reset-form{
+        height: 140px !important;
+    }
+}
+
+@media screen and (min-width:1500px) {
+    .reset-form{
+        height: 200px !important;
+    }
+}

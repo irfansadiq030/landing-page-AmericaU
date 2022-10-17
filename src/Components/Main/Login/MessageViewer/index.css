@@ -1,0 +1,39 @@
+.forgot-password-container {
+    width: 100%;
+    min-height: 100%;
+    border: 12px solid #002356;
+    background-color: #fff;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: relative;
+    padding-top: 20px;
+  }
+  
+  .main {
+    flex: 1 0 auto;
+    /* border: 2px solid black; */
+    padding: 30px;
+  }
+  
+  .message {
+    font-family: "Acme";
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 25px;
+  }
+  .return-link {
+    font-family: "Acme";
+    text-align: center;
+    font-size: 30px;
+    color: #5bbf38;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .main {
+      padding: 0;
+    }
+    .message {
+      font-size: 22px;
+    }
+  }
+  

@@ -1,0 +1,12 @@
+.robo-icon {
+    width: 180px;
+    padding-top: 20px;
+}
+
+/* Responsivness */
+@media screen and (min-width:1500px) {
+    .robo-icon {
+        width: 220px;
+        padding-top: 35px;
+    }
+}

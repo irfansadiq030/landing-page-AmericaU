@@ -27,6 +27,12 @@ import AdminSeasonPass from './Components/Admin/SeasonPass/SeasonPass';
 import Home from './Components/Main/Home/Home';
 import Events from './Components/Main/Events/Events';
 import Comics from './Components/Main/Comics/Comics';
+import LoginOutlet from './Components/Main/Login/LoginOutlet';
+import LoginPage from './Components/Main/Login';
+import ResetPassword from './Components/Main/Login/ResetPassword/index';
+import MessageViewer from './Components/Main/Login/MessageViewer';
+import ForgotPassword from './Components/Main/Login/ForgotPassword';
+import ThankYou from './Components/Main/Login/ThankYou/index';
 
 export const GlobalInfo = createContext();
 
@@ -54,6 +60,17 @@ function App() {
             <Route path='blog' element={<AdminBlog />} />
             <Route path='blog/add-new' element={<AddBlog />} />
           </Route>
+
+          <Route path='/login' element={<LoginOutlet />} >
+            <Route index element={<LoginPage />} />
+            <Route path="reset-password" element={<ResetPassword />} />
+            <Route path="messageviewer" element={<MessageViewer message={"Hello"} is_link={true} />} />
+            <Route path="forgotpassword" element={<ForgotPassword />} />
+            <Route path="update-password" element={<ResetPassword />} />
+            <Route path="thankyou" element={<ThankYou />} />
+          </Route>
+
+
 
           <Route path='/' element={<PublicMain />} >
             <Route path="meet-the-heroes" element={<MeetHeroes />} />
