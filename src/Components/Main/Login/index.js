@@ -6,24 +6,28 @@ import trackEvent from "../../../services/tracker";
 import axios from 'axios';
 import { Formik, Form, Field } from 'formik';
 import Spinner from './../../Shared/Spinner/Spinner';
-
-
+import { useDispatch } from 'react-redux';
+import { login } from '../../../store/slices/user';
 
 export default function Index() {
 
     const navigate = useNavigate();
     const { pathname } = useLocation()
     const [loading, setLoading] = useState(false);
+    const dispatch = useDispatch();
+    const { state } = useLocation()
+
 
     useEffect(() => {
         // trackEvent("PAGE_LOGIN", {path: pathname}); 
 
-    }, [])
-
+    }, []);
 
     const handleSubmit = async ({ username, password }, actions) => {
 
-        trackEvent("LOGIN_LOGIN_PASSWORD", { path: pathname });
+        // trackEvent("LOGIN_LOGIN_PASSWORD", { path: pathname });
+
+        setLoading(true)
 
         try {
             const formData = new FormData();
@@ -32,22 +36,27 @@ export default function Index() {
             formData.append('password', password.trim());
 
             let result = await axios.post(
-                "./woogi/0.1/actor/cgi.php",
+                "https://portal.americau.com/woogi/0.1/actor/cgi.php",
                 formData
             );
 
             if (result.data.code == 200) {
-                return window.location.href = "./index"
+                dispatch(login(result.data));
+                if (state?.from)
+                    navigate(state.from);
+                else
+                    navigate("/");
             }
 
             if (result.data.code !== 200) {
-                // navigate('/messageviewer');
-                navigate('/messageviewer', { state: { msg: "Username or password is wrong." } });
+                navigate('/login/messageviewer', { state: { msg: "Username or password is wrong." } });
             }
 
         } catch (error) {
             window.alert(error.message)
         }
+
+        setLoading(false)
     }
 
     const init = {
@@ -98,7 +107,7 @@ export default function Index() {
 
                 <div className="uppercase flex flex-col lg:flex-row w-full text-center justify-center">
                     <p className='or-text'>OR</p>
-                    <Link to="/forgotpassword" className='forgot-pwd-txt hidden lg:block lg:absolute right-10 or-text'>Forgot Password?</Link>
+                    <Link to="/login/forgotpassword" className='forgot-pwd-txt hidden lg:block lg:absolute right-10 or-text'>Forgot Password?</Link>
                 </div>
                 <div className='flex flex-col mt-3 space-y-2 lg:space-x-3 lg:flex-row lg:space-y-0 lg:justify-between lg:items-center'>
                     <a href='https://api.americau.com/login/classlink' onClick={() => trackEvent("LOGIN_CLASSLINK", { path: pathname })} className="uppercase login-class-btn">Login with classLink</a>

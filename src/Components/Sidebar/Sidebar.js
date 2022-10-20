@@ -3,10 +3,16 @@ import './Sidebar.css'
 import Navmenu from './Navmenu/Navmenu'
 import { GlobalInfo } from '../../App'
 import { Link } from "react-router-dom";
-
+import { useDispatch } from 'react-redux';
+import { logout } from '../../store/slices/user';
 
 const Sidebar = () => {
     const { sidebar, HideSidebar } = useContext(GlobalInfo);
+    const dispatch = useDispatch(logout);
+
+    const logOutUser = () => {
+        dispatch(logout());
+    }
 
     return (
         <>
@@ -29,7 +35,7 @@ const Sidebar = () => {
                         <img className='portal-img' src="images/portal-btn.png" alt="" />
                         <p className='portal-text'>Parent/Teacher Login</p>
                     </div>
-                    <p className='logout-link'>Logout</p>
+                    <p className='logout-link cursor-pointer' onClick={logOutUser}>Logout</p>
                 </div>
 
             </div>

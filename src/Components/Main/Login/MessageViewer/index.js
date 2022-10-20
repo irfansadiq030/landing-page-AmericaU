@@ -10,8 +10,8 @@ const MessageViewer = (props) => {
 
             <div className="forgot-password-container mx-auto flex flex-col">
                 {/* Back Button */}
-                <Link to="/" className="back-button">
-                    <img src="images/icon-back.png" alt="" srcset="" />
+                <Link to="/login" className="back-button">
+                    <img src={process.env.PUBLIC_URL + "images/icon-back.png"} alt="" srcset="" />
                 </Link>
 
                 {/* Heading */}
@@ -26,7 +26,7 @@ const MessageViewer = (props) => {
                     </h1>
                     {
                         props.is_link && props.is_link === true ?
-                            <Link className='return-link uppercase' to="/">Return to Login</Link>
+                            <Link className='return-link uppercase' to="/login">Return to Login</Link>
                             :
                             ''
                     }
@@ -38,7 +38,7 @@ const MessageViewer = (props) => {
                     <a href="https://heroesleaguegameday.com/"> <h1 className="learn-more-heading uppercase">Learn More</h1> </a>
                     <div className="flex flex-col items-center">
                         <p className='dont-have-account uppercase'>Don't have an account?</p>
-                        <a href="/"><h1 className="signup-text uppercase">Sign Up</h1></a>
+                        <a href="https://signup.americau.com/"><h1 className="signup-text uppercase">Sign Up</h1></a>
                     </div>
                 </div>
             </div>

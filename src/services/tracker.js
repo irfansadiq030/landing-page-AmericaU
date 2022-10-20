@@ -1,11 +1,11 @@
 import axios from "axios"
 
 export default async function trackEvent(event_name, object = null) {
-    await woogievent(event_name, object ?? {});
-    console.log("Woogi event sent");
+    // await woogievent(event_name, object ?? {});
+    // console.log("Woogi event sent");
 
-    await americauevent(event_name, object ?? {});
-    console.log("AmericaU event sent");
+    // await americauevent(event_name, object ?? {});
+    // console.log("AmericaU event sent");
 }
 
 function woogievent(event, object) {

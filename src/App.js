@@ -33,6 +33,9 @@ import ResetPassword from './Components/Main/Login/ResetPassword/index';
 import MessageViewer from './Components/Main/Login/MessageViewer';
 import ForgotPassword from './Components/Main/Login/ForgotPassword';
 import ThankYou from './Components/Main/Login/ThankYou/index';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import ProtectedRoute from './Components/Shared/ProtectedRoute/ProtectedRoute';
 
 export const GlobalInfo = createContext();
 
@@ -43,9 +46,8 @@ function App() {
     setEnableSidebar(!enableSidebar)
   }
 
-
   return (
-    <>
+    <Provider store={store}>
       <GlobalInfo.Provider value={{ sidebar: enableSidebar, HideSidebar: HideSidebar }}>
         <Routes>
           <Route path='/admin/' element={<AdminIndex />} >
@@ -72,7 +74,7 @@ function App() {
 
 
 
-          <Route path='/' element={<PublicMain />} >
+          <Route path='/' element={<ProtectedRoute><PublicMain /></ProtectedRoute>} >
             <Route path="meet-the-heroes" element={<MeetHeroes />} />
             <Route path="blog" element={<BlogListing />} />
             <Route path="blog-detail" element={<BlogDetail />} />
@@ -90,7 +92,7 @@ function App() {
 
         </Routes>
       </GlobalInfo.Provider>
-    </>
+    </Provider>
   );
 }
 
