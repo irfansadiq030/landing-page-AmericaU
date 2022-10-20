@@ -36,6 +36,9 @@ import ThankYou from './Components/Main/Login/ThankYou/index';
 import { Provider } from 'react-redux';
 import { store } from './store';
 import ProtectedRoute from './Components/Shared/ProtectedRoute/ProtectedRoute';
+import DataLoader from './Components/Shared/DataLoader/DataLoader';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const GlobalInfo = createContext();
 
@@ -48,50 +51,55 @@ function App() {
 
   return (
     <Provider store={store}>
-      <GlobalInfo.Provider value={{ sidebar: enableSidebar, HideSidebar: HideSidebar }}>
-        <Routes>
-          <Route path='/admin/' element={<AdminIndex />} >
-            <Route index element={<AdminHome />} />
-            <Route path='videos' element={<AdminVideos />} />
-            <Route path='season-pass' element={<AdminSeasonPass />} />
-            <Route path='season-pass/add-new' element={<AddNewSeason />} />
-            <Route path='comics' element={<AdminComics />} />
-            <Route path='comics/add-new' element={<AddNewComics />} />
-            <Route path='events' element={<AdminEvents />} />
-            <Route path='events/add-new' element={<AddEvents />} />
-            <Route path='blog' element={<AdminBlog />} />
-            <Route path='blog/add-new' element={<AddBlog />} />
-          </Route>
 
-          <Route path='/login' element={<LoginOutlet />} >
-            <Route index element={<LoginPage />} />
-            <Route path="reset-password" element={<ResetPassword />} />
-            <Route path="messageviewer" element={<MessageViewer message={"Hello"} is_link={true} />} />
-            <Route path="forgotpassword" element={<ForgotPassword />} />
-            <Route path="update-password" element={<ResetPassword />} />
-            <Route path="thankyou" element={<ThankYou />} />
-          </Route>
+      <DataLoader>
+
+        <GlobalInfo.Provider value={{ sidebar: enableSidebar, HideSidebar: HideSidebar }}>
+          <Routes>
+            <Route path='/admin/' element={<AdminIndex />} >
+              <Route index element={<AdminHome />} />
+              <Route path='videos' element={<AdminVideos />} />
+              <Route path='season-pass' element={<AdminSeasonPass />} />
+              <Route path='season-pass/add-new' element={<AddNewSeason />} />
+              <Route path='comics' element={<AdminComics />} />
+              <Route path='comics/add-new' element={<AddNewComics />} />
+              <Route path='events' element={<AdminEvents />} />
+              <Route path='events/add-new' element={<AddEvents />} />
+              <Route path='blog' element={<AdminBlog />} />
+              <Route path='blog/add-new' element={<AddBlog />} />
+            </Route>
+
+            <Route path='/login' element={<LoginOutlet />} >
+              <Route index element={<LoginPage />} />
+              <Route path="reset-password" element={<ResetPassword />} />
+              <Route path="messageviewer" element={<MessageViewer message={"Hello"} is_link={true} />} />
+              <Route path="forgotpassword" element={<ForgotPassword />} />
+              <Route path="update-password" element={<ResetPassword />} />
+              <Route path="thankyou" element={<ThankYou />} />
+            </Route>
 
 
 
-          <Route path='/' element={<ProtectedRoute><PublicMain /></ProtectedRoute>} >
-            <Route path="meet-the-heroes" element={<MeetHeroes />} />
-            <Route path="blog" element={<BlogListing />} />
-            <Route path="blog-detail" element={<BlogDetail />} />
-            <Route path="videos" element={<VideosPage />} />
-            <Route path="comics" element={<Comics />} />
-            <Route path="comics-list" element={<ComicsListing />} />
-            <Route path="news" element={<News />} />
-            <Route path="games" element={<Games />} />
-            <Route path="seasonpass" element={<SeasonPassMain />} />
-            <Route path="seasonpass-list" element={<SeasonPassStories />} />
-            <Route path="events" element={<Events />} />
-            <Route path="leaderboard" element={<Leaderboard />} />
-            <Route index path="/" element={<Home />} />
-          </Route>
+            <Route path='/' element={<ProtectedRoute><PublicMain /></ProtectedRoute>} >
+              <Route path="meet-the-heroes" element={<MeetHeroes />} />
+              <Route path="blog" element={<BlogListing />} />
+              <Route path="blog-detail" element={<BlogDetail />} />
+              <Route path="videos" element={<VideosPage />} />
+              <Route path="comics" element={<Comics />} />
+              <Route path="comics-list" element={<ComicsListing />} />
+              <Route path="news" element={<News />} />
+              <Route path="games" element={<Games />} />
+              <Route path="seasonpass" element={<SeasonPassMain />} />
+              <Route path="seasonpass-list" element={<SeasonPassStories />} />
+              <Route path="events" element={<Events />} />
+              <Route path="leaderboard" element={<Leaderboard />} />
+              <Route index path="/" element={<Home />} />
+            </Route>
 
-        </Routes>
-      </GlobalInfo.Provider>
+          </Routes>
+        </GlobalInfo.Provider>
+      </DataLoader>
+      <ToastContainer />
     </Provider>
   );
 }

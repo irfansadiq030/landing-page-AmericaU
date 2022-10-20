@@ -8,6 +8,7 @@ import { Formik, Form, Field } from 'formik';
 import Spinner from './../../Shared/Spinner/Spinner';
 import { useDispatch } from 'react-redux';
 import { login } from '../../../store/slices/user';
+import { apiCaller, apiCallerPost } from './../../../services/api';
 
 export default function Index() {
 
@@ -35,10 +36,7 @@ export default function Index() {
             formData.append('name', username.trim());
             formData.append('password', password.trim());
 
-            let result = await axios.post(
-                "https://portal.americau.com/woogi/0.1/actor/cgi.php",
-                formData
-            );
+            let result = await apiCallerPost(formData)
 
             if (result.data.code == 200) {
                 dispatch(login(result.data));
