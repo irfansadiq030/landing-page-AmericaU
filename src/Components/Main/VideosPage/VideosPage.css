@@ -48,7 +48,8 @@
 
 .heroes-newsContainer {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; 
+    padding-bottom: 20px
 }
 
 .heroesNews-video {

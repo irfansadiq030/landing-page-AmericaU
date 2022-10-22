@@ -6,6 +6,7 @@ import eventsSlice from './slices/events';
 import gamesSlice from './slices/games';
 import comicsSlice from './slices/comics';
 import blogSlice from './slices/blog';
+import videosSlice from './slices/videos';
 
 export const store = configureStore({
     reducer: {
@@ -16,6 +17,7 @@ export const store = configureStore({
         games: gamesSlice,
         comics: comicsSlice,
         blog: blogSlice,
+        videos: videosSlice
 
     }
 })

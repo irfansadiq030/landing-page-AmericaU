@@ -32,8 +32,7 @@ export default function DataLoader({ children }) {
                 apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getMiniGames" }),
                 apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getComics" }),
                 apiCallerPost({ cmd: "auth_HeroLeagueBlogOpen.getBlog" }),
-            ]);
-
+            ])
 
 
 
