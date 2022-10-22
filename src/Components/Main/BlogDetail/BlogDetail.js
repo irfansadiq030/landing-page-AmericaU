@@ -1,37 +1,34 @@
 import React from 'react'
 import './BlogDetail.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
+import { useLocation, useNavigate, Navigate } from 'react-router-dom'
+import { imagesBase } from '../../../services/api';
+import dayjs from 'dayjs'
 
 const BlogDetail = () => {
+    const { state: post } = useLocation();
+    const nav = useNavigate()
+
+    if (post == null) {
+        return <Navigate to={"/blog"} />
+    }
+
+    console.log(post);
     return (
         <div className='blogDetail-container'>
             <MobileHeader />
-            <img className='blogDetail-main-img' src="images/blog Detail.png" alt="" />
-            <h1 className='blogDetail-title'>Blog Title</h1>
+            <img className='back-btn' alt='back button' src="images/blog-left-arrow.png" onClick={() => nav("/blog")} />
+
+            <img className='blogDetail-main-img' src={imagesBase + post.theme_img} alt={post.title} />
+            <h1 className='blogDetail-title'>{post.title}</h1>
             <div className="blog-meta-container">
-                <span>Date |</span>
-                <span>Category |</span>
-                <span>Posted By </span>
+                <span>Date: {dayjs(post.c_time).format("MMM DD, YYYY")} |</span>
+                <span>Category: {post.kind} |</span>
+                <span>Posted By: {post.author} </span>
             </div>
             <div className="blogDetail-content-container">
-                <div className="blog_txt_container">
-                    <p>Have you ever heard the saying, “if you don’t have anything nice to say,
-                        don’t say anything at all?”</p>
-                    <p>The opposite is true too. If you have something nice to say,
-                        you should say it! Everyone likes to get a compliment, and it can feel just as good to give one too.
-                        If you see someone who looks cool in their new hat,
-                        tell them! If someone does something awesome, tell them!
-                    </p>
-                    <p>
-                        <iframe className='videoIframe' height="400px" src="https://www.youtube.com/embed/Z2lw8jjry3M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </p>
-                    <p>Have you ever heard the saying, “if you don’t have anything nice to say,
-                        don’t say anything at all?”</p>
-                    <p>The opposite is true too. If you have something nice to say,
-                        you should say it! Everyone likes to get a compliment, and it can feel just as good to give one too.
-                        If you see someone who looks cool in their new hat,
-                        tell them! If someone does something awesome, tell them!
-                    </p>
+                <div className="blog_txt_container" dangerouslySetInnerHTML={{ __html: post.content }}>
+
                 </div>
 
             </div>

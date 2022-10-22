@@ -15,6 +15,12 @@
 
 }
 
+.back-btn {
+    margin: auto;
+    display: block;
+    padding-top: 50px;
+}
+
 .blogDetail-main-img {
     width: 80%;
     margin: auto;

@@ -12,40 +12,36 @@
     position: relative;
     margin-left: 250px;
     overflow: auto;
+    @apply px-8; 
 }
 
-.blogCard-container{
-    width: 90%;
-    margin:0px auto 0px auto;
-    /* background: #000; */
+.blog-cards-container {
+    @apply flex flex-col w-full px-5; 
 }
+
 .blogcard{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    @apply w-full grid grid-cols-6; 
     border-bottom: 3px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
+}
 
-}
-.blogcard2{
-    padding-top: 30px;
-}
 .blog-img-container{
-    width: 120%;
-    height: 190px;
-    background: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @apply col-span-6 pr-0 lg:pr-7 lg:col-span-2 ; 
 }
-.bloListing-thumbnail{
-    width: 98%;
-    height: 96%;
+
+
+.blog-detail-container {
+    @apply col-span-6 sm:col-span-2
 }
-.blogContent-container{
-    padding-left: 20px;
+
+.blog-listing-thumbnail{
+    max-width: 100%;
+    height: auto;
 }
+
+
+
 .blogListing-title{
     font-family: 'Brady Bunch Remastered';
     font-size: 36px;
@@ -68,69 +64,28 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    margin: 10px auto;
+    margin: 60px auto;
 }
+
 .blog-left-arrow{
     margin-right: 15px;
     cursor: pointer;
 }
+
 .blog-right-arrow{
     margin-left: 15px;
     cursor: pointer;
-
 }
+
 .blogtitle-link{
     text-decoration: none;
 }
 
-/* Mobile Responsiveness */
 
-@media screen and (max-height:400px) {
-    .blog-img-container{
-        width: 350px !important;
-    }
-    .blogContent-container{
-        text-align: center;
-    }
-}
+    
 
-@media screen and (max-width:800px) {
-    .blogList-container{
-        margin: 0 !important;
-    }
-    .blogcard{
-        flex-direction: column;
-        align-items: center;
-    }
-    .blog-img-container{
-        width: 100%;
-        margin-bottom: 10px;
-    }
-    .blogContent-container{
-        padding-left: 0;
-    }
-    .blog-pagintaion{
-        justify-content: center;
-    }
-}
-@media screen and (max-width:1100px) {
 
-    .blogList-container{
-        margin-left: 245px;
-    }
-}
 
-@media screen and (min-width:1440px) {
-    .blogList-container{
-        margin-left: 315px;
-    }
-    .blog-img-container{
-        width: 100%;
-    }
-}   
-@media screen and (min-width:1700px) {
-   
-    .blog-img-container{
-        width: 60%;
-    }
-}   
+ 
+
+

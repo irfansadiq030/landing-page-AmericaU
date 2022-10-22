@@ -6,4 +6,4 @@ export const axiosInstance = axios.create({
 
 export const apiCallerGet = (data) => axiosInstance.get("", data)
 export const apiCallerPost = (data) => axiosInstance.post("", data)
-
+export const imagesBase = "https://portal.americau.com"

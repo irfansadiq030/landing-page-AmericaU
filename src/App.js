@@ -78,8 +78,6 @@ function App() {
               <Route path="thankyou" element={<ThankYou />} />
             </Route>
 
-
-
             <Route path='/' element={<ProtectedRoute><PublicMain /></ProtectedRoute>} >
               <Route path="meet-the-heroes" element={<MeetHeroes />} />
               <Route path="blog" element={<BlogListing />} />

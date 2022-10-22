@@ -36,13 +36,14 @@ export default function DataLoader({ children }) {
 
 
 
+
             dispatch(loadNews(news.data.data))
             dispatch(loadSeasons(season.data.data))
             dispatch(loadEvents(events.data.data))
             dispatch(loadVideos(videos.data.data))
             dispatch(loadGames(games.data.data))
             dispatch(loadComics(comics.data.data))
-            dispatch(loadBlog(comics.data.data))
+            dispatch(loadBlog(blog.data.blogs))
 
 
             toast.dismiss()
