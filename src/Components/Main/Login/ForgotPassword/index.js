@@ -45,7 +45,7 @@ const ForgotPassword = () => {
                 {/* Heading */}
                 <div className="mb-4 text-center">
                     <h1 className='heading-container reset-form-heading uppercase text-center'>Reset Password</h1>
-                    {!sent && <h2 style={{ color: "#002356" }} className='text-2xl normal-case '>
+                    {!sent && <h2 style={{ color: "#002356" }} className='text-2xl normal-case reset-pwd-info'>
                         Enter your username to receive an email to reset your password
                     </h2>}
                 </div>

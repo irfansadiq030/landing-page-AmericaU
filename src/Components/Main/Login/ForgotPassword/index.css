@@ -1,11 +1,15 @@
+.reset-pwd-info {
+    font-family: "Brady Bunch Remastered";
+}
+
 @media screen and (max-width:1440px) {
-    .reset-form{
+    .reset-form {
         height: 140px !important;
     }
 }
 
 @media screen and (min-width:1500px) {
-    .reset-form{
+    .reset-form {
         height: 200px !important;
     }
 }
