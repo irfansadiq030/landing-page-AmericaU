@@ -238,7 +238,7 @@ export default function AdminIndex() {
                     </div>
 
                     <main>
-                        <div className="py-6 bg-gray-100">
+                        <div className="py-6 bg-gray-100 min-h-screen">
                             <Outlet />
                         </div>
                     </main>

@@ -28,7 +28,6 @@ export default function SeasonPass() {
                     <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'>
 
                         <SeasonPassData />
-                        {/* Table START */}
                         <SeasonPassTable />
 
                     </div>
