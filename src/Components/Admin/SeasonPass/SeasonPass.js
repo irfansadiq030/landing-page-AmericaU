@@ -25,12 +25,12 @@ export default function SeasonPass() {
                     >
                         Add New
                     </Link>
-                    <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'>
+                    {/* <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'> */}
 
                         <SeasonPassData />
                         <SeasonPassTable />
 
-                    </div>
+                    {/* </div> */}
 
                 </div>
 

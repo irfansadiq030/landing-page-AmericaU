@@ -19,14 +19,14 @@ const AddBlog = () => {
                             Back
                         </Link>
 
-                       
+
                     </div>
 
                     {/* Form Area start */}
                     <div className="w-6/12 mt-5 md:mt-0 md:col-span-2 mx-auto">
                         <form action="#" method="POST">
                             <div className="">
-                                <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+                                <div className="px-4 py-5 bg-white space-y-6 sm:p-6 rounded">
 
                                     <div>
                                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
@@ -94,15 +94,16 @@ const AddBlog = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="px-4 text-right sm:px-6">
+                                        <button
+                                            type="submit"
+                                            className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                        >
+                                            Save
+                                        </button>
+                                    </div>
                                 </div>
-                                <div className="px-4 py-3 text-right sm:px-6">
-                                    <button
-                                        type="submit"
-                                        className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                    >
-                                        Save
-                                    </button>
-                                </div>
+
                             </div>
                         </form>
                     </div>
