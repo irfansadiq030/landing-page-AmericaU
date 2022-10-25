@@ -16,7 +16,8 @@ const comicsSlice = createSlice({
 
 export const { loadComics, unloadComics } = comicsSlice.actions;
 
-const comics = state => state.comics
-export const getGames = createSelector(comics, (comics) => comics);
+const comics = state => state.comics;
+
+export const getComics = createSelector(comics, (comics) => comics);
 
 export default comicsSlice.reducer

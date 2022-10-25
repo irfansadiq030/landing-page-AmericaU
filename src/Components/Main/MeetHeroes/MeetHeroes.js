@@ -5,6 +5,7 @@ import PageTitle from '../PageTitle/PageTitle'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from 'react-redux';
 const heroesData = [
     {
         img: 'KID EINSTEIN-min.png',
@@ -104,6 +105,7 @@ const MeetHeroes = () => {
     const [heroName, setHeroName] = useState(true);
     const [sliderRef, setSliderRef] = useState(null);
 
+
     // Onclick any hero name slide to display function
     const slideGoto = (index) => {
         sliderRef?.slickGoTo(index)
@@ -116,23 +118,13 @@ const MeetHeroes = () => {
                 <span>{heroesNames[i]} </span>
             );
         },
-        // dotsClass: "slick-dots heroes-name-container",
         arrows: false,
         infinite: true,
-        lazyLoad:'ondemand',
+        lazyLoad: 'ondemand',
         speed: 500,
         slidesToShow: 1,
         slidesToScroll: 1,
         centerPadding: "20px",
-        // responsive: [
-        //     {
-        //         breakpoint: 600,
-        //         settings: {
-        //             dotsClass: "slick-dots fani mobile-heroNameContainer",
-        //             dots: true,
-        //         }
-        //     },
-        // ]
 
     };
 
@@ -145,28 +137,28 @@ const MeetHeroes = () => {
             <img onClick={() => setHeroName(!heroName)} className='meetHeroes-main-img' src="images/vector.png" alt="" />
             <div className="heroName-container">
                 {
-                    heroesNames.map((name,index) => {
+                    heroesNames.map((name, index) => {
                         return (
-                            <span onClick={()=>slideGoto(index)} className="heroName"> {name}   &nbsp; &nbsp;| </span>
+                            <span onClick={() => slideGoto(index)} className="heroName"> {name}   &nbsp; &nbsp;| </span>
                         )
                     })
                 }
 
-                <span onClick={()=>slideGoto(20)} className="heroName">Master Hearme Longwind </span>
+                <span onClick={() => slideGoto(20)} className="heroName">Master Hearme Longwind </span>
             </div>
             <div className="hero-dropdown-nameContainer">
                 <select onChange={e => slideGoto(e.target.value)} className='namedrop-down'>
                     <option selected disabled>Select Hero Name</option>
                     {
-                    heroesNames.map((name,index) => {
-                        return (
-                            <option value={index}> {name} </option>
-                        )
-                    })
-                }
+                        heroesNames.map((name, index) => {
+                            return (
+                                <option value={index}> {name} </option>
+                            )
+                        })
+                    }
                     {/* <option value="1">Dean Archer</option>
                     <option value="1">Mental Ninja</option> */}
-                    
+
                 </select>
                 <i class="fa-solid fa-chevron-down hrn-dropdown-icon"></i>
             </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import './Games.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import PageTitle from '../PageTitle/PageTitle'
+import { useSelector } from 'react-redux'
+import { getGames } from '../../../store/slices/games'
 
 const gamesData = [
     {
@@ -49,6 +51,8 @@ const gamesData = [
 const iconBaseURL = 'images/games-icons/';
 
 const Games = () => {
+    const games = useSelector(getGames);
+    console.log(games);
     return (
         <div className='gamesPg-container'>
             <MobileHeader />
@@ -58,7 +62,7 @@ const Games = () => {
                     gamesData.map((game, index) => {
                         return (
                             <div key={index} className="gameIcon">
-                                <img src={iconBaseURL+game.icon} alt="games race icon" />
+                                <img src={iconBaseURL + game.icon} alt="games race icon" />
                                 <h2 className='gameTitle'>{game.title}</h2>
                             </div>
                         )

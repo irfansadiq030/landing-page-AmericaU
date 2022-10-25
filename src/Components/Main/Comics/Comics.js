@@ -3,8 +3,12 @@ import './Comics.css'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import PageTitle from '../PageTitle/PageTitle'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getComics } from '../../../store/slices/comics'
 
 const Comics = () => {
+    const comics = useSelector(getComics);
+
     return (
         <div className='comics-container'>
             <MobileHeader />
@@ -22,7 +26,7 @@ const Comics = () => {
                         <img className='comics-coverimg' src="images/cover2.png" alt="" />
                     </div>
                     <div className="comics-card">
-                    <img className='comics-coverimg' src="images/cover3.png" alt="" />
+                        <img className='comics-coverimg' src="images/cover3.png" alt="" />
                     </div>
                 </div>
                 <Link to="/comics-list" className="readmore-comics-btn">
