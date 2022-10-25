@@ -121,12 +121,12 @@ export default function Blog() {
                     </div>
                     
                     {/* Form Area start */}
-                    <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'>
+                    {/* <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'> */}
 
 
                         {/* Table START */}
                         <BlogTable /> 
-                    </div>
+                    {/* </div> */}
                 </div>
                 {/* /End replace */}
             </div>

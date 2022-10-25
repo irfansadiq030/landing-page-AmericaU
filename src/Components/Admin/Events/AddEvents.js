@@ -23,95 +23,91 @@ const AddEvents = () => {
                     </div>
 
                     {/* Form Area start */}
-                    <div className='shadow sm:rounded-md sm:overflow-hidden pb-6'>
-                        <div className="w-6/12 mt-5 md:mt-0 md:col-span-2 mx-auto">
-                            <form action="#" method="POST">
-                                <div className="">
-                                    <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+                    <div className="w-6/12 mt-5 md:mt-0 md:col-span-2 mx-auto">
+                        <form action="#" method="POST">
+                            <div className="">
+                                <div className="px-4 py-5 bg-white space-y-6 sm:p-6 rounded">
 
-                                        <div>
-                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                                Title
-                                            </label>
-                                            <div className="mt-1">
-                                                <input
-                                                    type="text"
-                                                    name="title"
-                                                    id="title"
-                                                    className="p-2 border-gray-200 border shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                                    placeholder="Event Title"
-                                                />
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                                                Event Description
-                                            </label>
-                                            <div className="mt-1">
-                                                <textarea
-                                                    rows={4}
-                                                    name="comment"
-                                                    id="comment"
-                                                    className="p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
-                                                    defaultValue={''}
-                                                />
-                                            </div>
-                                        </div>
-
-                                        <div className=''>
-                                            <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
-                                                Location
-                                            </label>
-                                            <select
-                                                id="location"
-                                                name="location"
-                                                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                                                defaultValue="Canada"
-                                            >
-                                                <option>Pakistan</option>
-                                                <option>USA</option>
-                                                <option>UK</option>
-                                               
-                                            </select>
-                                        </div>
-                                        <div className=''>
-                                            <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
-                                                Display Filter
-                                            </label>
-                                            <select
-                                                id="location"
-                                                name="location"
-                                                className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
-                                                defaultValue="Canada"
-                                            >
-                                                <option>Specific User</option>
-                                                <option>Country</option>
-                                                <option>State</option>
-                                               
-                                            </select>
-                                        </div>
-
-
-                                        <div class="relative">
-                                            <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
-                                                Start Date
-                                            </label>
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                            Title
+                                        </label>
+                                        <div className="mt-1">
                                             <input
-                                                className='p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
-                                             type="datetime-local" id="birthdaytime" name="birthdaytime"/>
+                                                type="text"
+                                                name="title"
+                                                id="title"
+                                                className="p-2 border-gray-200 border shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                                placeholder="Event Title"
+                                            />
                                         </div>
-                                        <div class="relative">
-                                            <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
-                                                End Date
-                                            </label>
-                                            <input
-                                                className='p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
-                                             type="datetime-local" id="birthdaytime" name="birthdaytime"/>
-                                        </div>
-
-
                                     </div>
-                                    <div className="px-4 py-3 text-right sm:px-6">
+                                    <div>
+                                        <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                                            Event Description
+                                        </label>
+                                        <div className="mt-1">
+                                            <textarea
+                                                rows={4}
+                                                name="comment"
+                                                id="comment"
+                                                className="p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+                                                defaultValue={''}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div className=''>
+                                        <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
+                                            Location
+                                        </label>
+                                        <select
+                                            id="location"
+                                            name="location"
+                                            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                                            defaultValue="Canada"
+                                        >
+                                            <option>Pakistan</option>
+                                            <option>USA</option>
+                                            <option>UK</option>
+
+                                        </select>
+                                    </div>
+                                    <div className=''>
+                                        <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
+                                            Display Filter
+                                        </label>
+                                        <select
+                                            id="location"
+                                            name="location"
+                                            className="mt-1 block w-full pl-3 pr-10 py-2 text-base border border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+                                            defaultValue="Canada"
+                                        >
+                                            <option>Specific User</option>
+                                            <option>Country</option>
+                                            <option>State</option>
+
+                                        </select>
+                                    </div>
+
+
+                                    <div class="relative">
+                                        <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
+                                            Start Date
+                                        </label>
+                                        <input
+                                            className='p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
+                                            type="datetime-local" id="birthdaytime" name="birthdaytime" />
+                                    </div>
+                                    <div class="relative">
+                                        <label htmlFor="location" className=" block text-sm font-medium text-gray-700">
+                                            End Date
+                                        </label>
+                                        <input
+                                            className='p-2 border border-gray-200 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md'
+                                            type="datetime-local" id="birthdaytime" name="birthdaytime" />
+                                    </div>
+                                    <div className="px-4 text-right sm:px-6">
                                         <button
                                             type="submit"
                                             className="inline-flex justify-center py-2 px-6 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -119,9 +115,11 @@ const AddEvents = () => {
                                             Save
                                         </button>
                                     </div>
+
                                 </div>
-                            </form>
-                        </div>
+
+                            </div>
+                        </form>
                     </div>
                 </div>
                 {/* /End replace */}

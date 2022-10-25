@@ -2,9 +2,9 @@ import React from 'react'
 
 const SeasonPassData = () => {
     return (
-        <div className="md:grid md:grid-cols-3 md:gap-6">
+        <div className="md:grid md:grid-cols-1 md:gap-6 rounded-lg ">
             <div className="mt-5 md:mt-0 md:col-span-2">
-                <div className="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <div className="px-4 py-5 bg-white space-y-6 sm:p-6 rounded-md">
                     <div>
                         <label htmlFor="email" className="block text-sm font-medium text-gray-700">
                             Main Page Title
