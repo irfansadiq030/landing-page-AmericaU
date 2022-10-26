@@ -3,8 +3,15 @@ import './News.css';
 import MobileHeader from '../MobileHeader/MobileHeader';
 import PageTitle from '../PageTitle/PageTitle';
 import Slider from "react-slick";
+import { useSelector } from 'react-redux';
+import { getNews } from '../../../store/slices/news';
+
 
 const News = () => {
+    // Redux
+    const news = useSelector(getNews);
+    console.log(news[0].attachment[0]);
+    console.log(news.length)
     const [sliderRef, setSliderRef] = useState(null)
     const settings = {
         dots: false,
@@ -75,7 +82,13 @@ const News = () => {
                         <h3 className="morenews-title">More</h3>
                         <div className="moreNewsitemContainer">
                             <Slider ref={setSliderRef} {...settings}>
-                                <div className="moreNews-item">
+                                {
+
+                                    news && news.map(latestNews => <div className="moreNews-item">
+                                        <img className='moreNewsImg' src={latestNews.attachment[0]} alt={latestNews.title} />
+                                    </div>)  
+                                }
+                                {/* <div className="moreNews-item">
                                     <img className='moreNewsImg' src="images/4-29 heroes news.png" alt="" />
                                 </div>
                                 <div className="moreNews-item">
@@ -83,16 +96,8 @@ const News = () => {
                                 </div>
                                 <div className="moreNews-item">
                                     <img className='moreNewsImg' src="images/slide - hero of the week - master dreamyearth.png" alt="" />
-                                </div>
-                                <div className="moreNews-item">
-                                    <img className='moreNewsImg' src="images/4-29 heroes news.png" alt="" />
-                                </div>
-                                <div className="moreNews-item">
-                                    <img className='moreNewsImg' src="images/4-29 heroes news.png" alt="" />
-                                </div>
-                                <div className="moreNews-item">
-                                    <img className='moreNewsImg' src="images/4-29 heroes news.png" alt="" />
-                                </div>
+                                </div> */}
+                                
                             </Slider>
                         </div>
                     </div>
@@ -106,10 +111,14 @@ const News = () => {
                     <div className="moblNewsSliderContainer">
 
                         <Slider ref={setMobileSliderRef} {...mobileSettings}>
+                            {
+                                
+                                // news && news.map(latetNews => <img className='mobileSlide-newsImg' src={latetNews.attachment[0]} alt="" />)  
+                            }
+                            {/* <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
                             <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
                             <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
-                            <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
-                            <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
+                            <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" /> */}
                         </Slider>
                     </div>
                     <img onClick={mobileSliderRef?.slickPrev} className='moreNews-sideNxtIcon' src="images/icon-back.png" alt="" />
