@@ -19,7 +19,17 @@ const Comics = () => {
                     New
                 </h1>
                 <div className="comics-card-container">
-                    <div className="comics-card">
+                    {
+                        comics.length > 0 ?
+                            comics.slice(0, 3).map(comic =>
+                                <div className="comics-card">
+                                    <img className='comics-coverimg' src={comic.cover_img} alt="" />
+                                </div>
+                            )
+                            :
+                            alert('No Comics Found')
+                    }
+                    {/* <div className="comics-card">
                         <img className='comics-coverimg' src="images/cover.jpg" alt="" />
                     </div>
                     <div className="comics-card">
@@ -27,7 +37,7 @@ const Comics = () => {
                     </div>
                     <div className="comics-card">
                         <img className='comics-coverimg' src="images/cover3.png" alt="" />
-                    </div>
+                    </div> */}
                 </div>
                 <Link to="/comics-list" className="readmore-comics-btn">
                     Read More

@@ -5,7 +5,8 @@ import PageTitle from '../PageTitle/PageTitle';
 import { useSelector } from 'react-redux';
 import { getEvents } from '../../../store/slices/events';
 
-import moment from 'moment'
+// import moment from 'moment'
+import dayjs from 'dayjs'
 
 const Events = () => {
   const events = useSelector(getEvents);
@@ -27,7 +28,8 @@ const Events = () => {
                   {active.content}
                 </p>
                 {/* <p className="event-date">MAY 20th - May 30th</p> */}
-                <p className="event-date">{moment(Number(active.start_time)).format("MMM Do")} - {moment(Number(active.end_time)).format("MMM Do")} </p>
+                {/* <p className="event-date">{moment(Number(active.start_time)).format("MMM Do")} - {moment(Number(active.end_time)).format("MMM Do")} </p> */}
+                <p className="event-date">{dayjs(active.start_time).format("MMM DD")} - {dayjs(active.end_time).format("MMM DD")} </p>
                 <a href={active.play_url} className="event-btn">
                   <img className='btn-img' src="images/Portal_btnGreen.png" alt="" />
                   <span className="btntxt">Go Now</span>
@@ -63,9 +65,9 @@ const Events = () => {
                     }
                   </p>
                   <div className="scl-event-dateContnr">
-                    <span className="schl-event-date">{moment(Number(staticEvent.start_time)).format('dddd')}</span>
-                    <span className="schl-event-date">{moment(Number(staticEvent.start_time)).format('MMM Do YYYY')}</span>
-                    <span className="schl-event-date">{moment(Number(staticEvent.start_time)).format('h:mm:ss a')}</span>
+                    <span className="schl-event-date">{dayjs(staticEvent.start_time).format('dddd')}</span>
+                    <span className="schl-event-date">{dayjs(staticEvent.start_time).format('MMM - DD - YYYY')}</span>
+                    <span className="schl-event-date">{dayjs(staticEvent.start_time).format('h:mm:ss a')}</span>
                   </div>
 
                 </div>
@@ -73,7 +75,7 @@ const Events = () => {
             </Fragment>)
           }
           
-          <div className="school-event-box">
+          {/* <div className="school-event-box">
             <img className='schoolEvent-img' src="images/mobile-header-bg.png" alt="" />
             <div className="school-event-content">
               <h3 className="schl-even-title">Title</h3>
@@ -87,7 +89,7 @@ const Events = () => {
               </div>
 
             </div>
-          </div>
+          </div> */}
 
         </div>
       </div>

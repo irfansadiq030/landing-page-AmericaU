@@ -1,27 +1,29 @@
-
-.comicsCard-container{
+.comicsCard-container {
     width: 90%;
-    margin:0px auto 0px auto;
+    margin: 0px auto 0px auto;
     /* background: #000; */
 }
-.comicsCard{
+
+.comicsCard {
     display: flex;
     width: 90%;
     justify-content: space-between;
     border-bottom: 3px solid black;
     padding-top: 20px;
     padding-bottom: 20px;
-    margin:0px auto 20px auto;
+    margin: 0px auto 20px auto;
 
 }
+
 /* .comicsCard:last-child{
     border-bottom: 0;
 } */
-.blogcard2{
+.blogcard2 {
     padding-top: 30px;
 }
-.comics-img-container{
-    width: 90%;
+
+.comics-img-container {
+    width: 25%;
     height: 350px;
     object-fit: contain;
     /* background: #000; */
@@ -29,15 +31,19 @@
     justify-content: center;
     align-items: center;
 }
-.comicsListing-thumbnail{
+
+.comicsListing-thumbnail {
     width: 98%;
     height: 100%;
     object-fit: contain;
 }
-.comicsContent-container{
+
+.comicsContent-container {
     padding-left: 20px;
+    width: 70%;
 }
-.comicsListing-title{
+
+.comicsListing-title {
     font-family: 'Brady Bunch Remastered';
     font-size: 36px;
     text-transform: uppercase;
@@ -45,7 +51,8 @@
     color: #ffb400;
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
-.comics-description{
+
+.comics-description {
     font-family: 'Arial';
     color: #000;
     font-size: 18px;
@@ -53,7 +60,8 @@
     padding-top: 15px;
     padding-right: 20px;
 }
-.blog-pagintaion{
+
+.blog-pagintaion {
     width: 90%;
     /* background: #000; */
     display: flex;
@@ -61,68 +69,84 @@
     align-items: center;
     margin: 10px auto;
 }
-.blog-left-arrow{
+
+.blog-left-arrow {
     margin-right: 15px;
     cursor: pointer;
 }
-.blog-right-arrow{
+
+.blog-right-arrow {
     margin-left: 15px;
     cursor: pointer;
 
 }
-.comicsTitle-link{
+
+.comicsTitle-link {
     text-decoration: none;
 }
 
 /* Mobile Responsiveness */
 
 @media screen and (max-height:400px) {
-    .comics-img-container{
+    .comics-img-container {
         width: 350px !important;
     }
-    .comicsContent-container{
+
+    .comicsContent-container {
         text-align: center;
     }
 }
 
 @media screen and (max-width:800px) {
-    .blogList-container{
+    .blogList-container {
         margin: 0 !important;
     }
-    .comicsCard{
+
+    .comicsCard {
         flex-direction: column;
         align-items: center;
     }
-    .comics-img-container{
+
+    .comics-img-container {
         width: 100%;
         margin-bottom: 10px;
     }
-    .comicsContent-container{
+
+    .comicsContent-container {
         padding-left: 0;
         text-align: center;
+        width: 100%;
     }
-    .blog-pagintaion{
+
+    .blog-pagintaion {
         justify-content: center;
     }
 }
+
 @media screen and (max-width:1100px) {
 
-    .blogList-container{
+    .blogList-container {
         margin-left: 245px;
     }
 }
 
 @media screen and (min-width:1440px) {
-    .blogList-container{
+    .blogList-container {
         margin-left: 315px;
     }
-    .comics-img-container{
-        width: 100%;
+
+    .comics-img-container {
+        width: 30%;
     }
-}   
+}
+
 @media screen and (min-width:1700px) {
-   
-    .comics-img-container{
-        width: 60%;
+
+    .comics-img-container {
+        width: 20%;
     }
-}   
+
+    .comicsContent-container {
+        width: 75%;
+    }
+}

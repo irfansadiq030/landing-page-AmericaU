@@ -3,8 +3,12 @@ import './SeasonPass.css'
 import PageTitle from '../PageTitle/PageTitle'
 import MobileHeader from '../MobileHeader/MobileHeader'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { getSeasons } from '../../../store/slices/season'
 
 const SeasonPass = () => {
+    const seasons = useSelector(getSeasons);
+    console.log(seasons);
     return (
         <div className='seasonPs-container'>
             <MobileHeader />
@@ -12,29 +16,17 @@ const SeasonPass = () => {
             <div className="seasonPs-content-container">
                 <div className="seasonPs-sidebar">
                     <h1 className="season-title">
-                        S1: THE RISE OF DARKSTAR
+                        S{seasons.season_num}: {seasons.main_title}
                     </h1>
                     <div className="seasonPs-desc-container">
                         <p className='seasonPs-descrp'>
+                            {seasons.main_content}
+                        </p>
+                        {/* <p className='seasonPs-descrp'>
                             Lord DarkStar is hiding somewhere in the pirate caves. It’s up to you and your classmates to search pirates caves for his secret base.
                             Complete the season pass to earn the Cap of Light and Justice!
                             Only available until August 20th!
-                        </p>
-                        <p className='seasonPs-descrp'>
-                            Lord DarkStar is hiding somewhere in the pirate caves. It’s up to you and your classmates to search pirates caves for his secret base.
-                            Complete the season pass to earn the Cap of Light and Justice!
-                            Only available until August 20th!
-                        </p>
-                        <p className='seasonPs-descrp'>
-                            Lord DarkStar is hiding somewhere in the pirate caves. It’s up to you and your classmates to search pirates caves for his secret base.
-                            Complete the season pass to earn the Cap of Light and Justice!
-                            Only available until August 20th!
-                        </p>
-                        <p className='seasonPs-descrp'>
-                            Lord DarkStar is hiding somewhere in the pirate caves. It’s up to you and your classmates to search pirates caves for his secret base.
-                            Complete the season pass to earn the Cap of Light and Justice!
-                            Only available until August 20th!
-                        </p>
+                        </p> */}
                     </div>
                 </div>
                 <div className="seasonPs-main">

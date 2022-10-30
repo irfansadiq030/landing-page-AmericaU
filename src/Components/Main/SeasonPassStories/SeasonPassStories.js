@@ -51,36 +51,36 @@ const seasonStories = [
 ]
 
 const SeasonPassStories = () => {
-  return (
-      <div className='seasonPs-container'>
-          <MobileHeader />
-          <PageTitle customColor="#FF8500" title="Season pass Stories" />
-          <div className="blogCard-container">
-              {
-                  seasonStories.map((season) => {
-                      return (
-                          <div className="blogcard">
-                              <div className="blog-img-container">
-                                  <img className='bloListing-thumbnail' src={`images/${season.img}`} alt="blog thumbnail" />
-                              </div>
-                              <div className="blogContent-container">
-                                  <Link className="blogtitle-link" to="/seasonpass-list"><h1 className="blogListing-title">{season.title}</h1></Link>
-                                  <p className="blog-date">{season.blogDate} </p>
-                                  <p className="blog-description">
-                                      {season.description}
-                                  </p>
-                              </div>
-                          </div>
-                      )
-                  })
-              }
-          </div>
-          <div className="blog-pagintaion">
-              <img className='blog-left-arrow' src="images/blog-left-arrow.png" alt="" />
-              <img className='blog-right-arrow' src="images/blog-right-arrow.png" alt="" />
-          </div>
-    </div>
-  )
+    return (
+        <div className='seasonPs-container'>
+            <MobileHeader />
+            <PageTitle customColor="#FF8500" title="Season pass Stories" />
+            <div className="blogCard-container">
+                {
+                    seasonStories.map((season) => {
+                        return (
+                            <div className="blogcard">
+                                <div className="blog-img-container">
+                                    <img className='bloListing-thumbnail' src={`images/${season.img}`} alt="blog thumbnail" />
+                                </div>
+                                <div className="blogContent-container">
+                                    <Link className="blogtitle-link" to="/seasonpass-list"><h1 className="blogListing-title">{season.title}</h1></Link>
+                                    <p className="blog-date">{season.blogDate} </p>
+                                    <p className="blog-description">
+                                        {season.description}
+                                    </p>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+            <div className="blog-pagintaion">
+                <img className='blog-left-arrow' src="images/blog-left-arrow.png" alt="" />
+                <img className='blog-right-arrow' src="images/blog-right-arrow.png" alt="" />
+            </div>
+        </div>
+    )
 }
 
 export default SeasonPassStories

@@ -3,6 +3,9 @@ import './BlogSlider.css'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useSelector } from 'react-redux';
+import { getBlog } from '../../../../store/slices/blog';
+import { imagesBase } from '../../../../services/api';
 
 const BlogSlider = () => {
     const [sliderRef, setSliderRef] = useState(null)
@@ -50,6 +53,11 @@ const BlogSlider = () => {
         ]
     };
 
+    // Fetching data
+    const blogs = useSelector(getBlog)
+    // const latestBlogs = blogs.sort((a, b) => (a.c_time > b.c_time) ? 1 : -1)
+
+
     return (
         <>
 
@@ -59,8 +67,18 @@ const BlogSlider = () => {
                 </div>
 
                 <Slider ref={setSliderRef} {...settings}>
-
-                    <div className="blog-box">
+                    {
+                        blogs.slice(0, 7).map(blog => 
+                        <div className="blog-box">
+                                <img className='blog-img' src={imagesBase + blog.theme_img} alt="" />
+                            <div className="blog-content-container">
+                                <span className="blog-date">Apr 3, 2022</span>
+                                    <h1 className="blog-title">{blog.title}</h1>
+                            </div>
+                        </div>
+                        )
+                    }
+                    {/* <div className="blog-box">
                         <img className='blog-img' src="/images/Week 1 Story 2.png" alt="" />
                         <div className="blog-content-container">
                             <span className="blog-date">Apr 3, 2022</span>
@@ -94,7 +112,7 @@ const BlogSlider = () => {
                             <span className="blog-date">Aug 3, 2022</span>
                             <h1 className="blog-title">Hero of the week Master PR...</h1>
                         </div>
-                    </div>
+                    </div> */}
 
                 </Slider>
 

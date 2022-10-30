@@ -14,6 +14,7 @@ import { imagesBase } from '../../../services/api'
 const BlogListing = () => {
     const blog = useSelector(getBlog);
     const [page, setPage] = useState(1);
+    // console.log(page);
 
     return (
         <div className='blogList-container'>
