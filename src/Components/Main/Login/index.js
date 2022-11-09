@@ -40,6 +40,8 @@ export default function Index() {
 
             if (result.data.code == 200) {
                 dispatch(login(result.data));
+
+                localStorage.setItem("jwt", result.data.jwt_str)
                 if (state?.from)
                     navigate(state.from);
                 else
