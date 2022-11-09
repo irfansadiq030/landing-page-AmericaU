@@ -5,5 +5,5 @@ export const axiosInstance = axios.create({
 });
 
 export const apiCallerGet = (data) => axiosInstance.get("", data)
-export const apiCallerPost = (data) => axiosInstance.post("", data, { headers: { jwt: localStorage.get("jwt") } })
+export const apiCallerPost = (data) => axiosInstance.post("", data, { headers: { jwt: localStorage.getItem("jwt") } })
 export const imagesBase = "https://portal.americau.com"
