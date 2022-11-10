@@ -28,7 +28,7 @@ const VideosPage = () => {
                 </div>
                 <div className="visitUs-iconContainer">
                     <h1 className="visitUs-on-title">Visit Us on</h1>
-                    <img src="images/ytLogo.png" alt="" onClick={() => window.open("https://www.youtube.com/c/HeroesLeague")} />
+                    <img className='hover:cursor-pointer' src="images/ytLogo.png" alt="" onClick={() => window.open("https://www.youtube.com/c/HeroesLeague")} />
                 </div>
             </div>
         </div>

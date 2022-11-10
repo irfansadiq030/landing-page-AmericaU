@@ -5,6 +5,7 @@ import MobileHeader from '../MobileHeader/MobileHeader'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import { getSeasons } from '../../../store/slices/season'
+import ModalImage from "react-modal-image";
 
 const SeasonPass = () => {
     const seasons = useSelector(getSeasons);
@@ -40,7 +41,12 @@ const SeasonPass = () => {
                     <img src="images/blog Detail.png" alt="" className="seasonPs-main-img" />
                     <div className="latestSeasonStories-container">
                         <div className="seasonBox1">
-                            <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" />
+                            <ModalImage
+                                small={'images/Week 1 Story 2.png'}
+                                large={'images/blog Detail.png'}
+                                className="seasonItme-img"
+                            />
+                            {/* <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" /> */}
                             <div className="latestSeasonPs-data">
                                 <h2 className="seasonPs-item-title">Slide Title</h2>
                                 <span className="seasonPs-item-date"> Mar,20,2022</span>
@@ -48,7 +54,12 @@ const SeasonPass = () => {
                         </div>
                         
                         <div className="seasonBox1">
-                            <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" />
+                            <ModalImage
+                                small={'images/Week 1 Story 2.png'}
+                                large={'images/blog Detail.png'}
+                                className="seasonItme-img"
+                            />
+                            {/* <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" /> */}
                             <div className="latestSeasonPs-data">
                                 <h2 className="seasonPs-item-title">Slide Title</h2>
                                 <span className="seasonPs-item-date"> Mar,20,2022</span>
@@ -56,7 +67,12 @@ const SeasonPass = () => {
                         </div>
                         
                         <div className="seasonBox1">
-                            <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" />
+                            <ModalImage
+                                small={'images/Week 1 Story 2.png'}
+                                large={'images/blog Detail.png'}
+                                className="seasonItme-img"
+                            />
+                            {/* <img className='seasonItme-img' src="images/Week 1 Story 2.png" alt="" /> */}
                             <div className="latestSeasonPs-data">
                                 <h2 className="seasonPs-item-title">Slide Title</h2>
                                 <span className="seasonPs-item-date"> Mar,20,2022</span>

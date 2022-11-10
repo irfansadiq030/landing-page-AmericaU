@@ -41,7 +41,7 @@ const BlogDetail = () => {
     return (
         <div className='blogDetail-container'>
             <MobileHeader />
-            <img className='back-btn' alt='back button' src="images/blog-left-arrow.png" onClick={() => nav("/blog")} />
+            {/* <img className='back-btn' alt='back button' src="images/blog-left-arrow.png" onClick={() => nav("/blog")} /> */}
 
             <img className='blogDetail-main-img' src={imagesBase + post.theme_img} alt={post.title} />
             <h1 className='blogDetail-title'>{post.title}</h1>
