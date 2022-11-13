@@ -8,6 +8,9 @@ const Leaderboard = () => {
         <div className='leaderBoard-container'>
             <MobileHeader />
             <PageTitle title="Leaderboard" />
+            <h1 className='flex items-center justify-center h-screen blogListing-title'>
+                Comming Soon...
+            </h1>
         </div>
     )
 }

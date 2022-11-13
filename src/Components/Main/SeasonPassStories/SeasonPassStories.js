@@ -59,15 +59,15 @@ const SeasonPassStories = () => {
                 {
                     seasonStories.map((season) => {
                         return (
-                            <div className="blogcard">
-                                <div className="blog-img-container">
-                                    <img className='bloListing-thumbnail' src={`images/${season.img}`} alt="blog thumbnail" />
+                            <div className="seasonPassCard">
+                                <div className="seasonPass-img-container">
+                                    <img className='seasonStories-thumbnail' src={`images/${season.img}`} alt="blog thumbnail" />
                                 </div>
-                                <div className="blogContent-container">
+                                <div className="seasonPassContent-container">
                                     <Link className="blogtitle-link" to="/seasonpass-list"><h1 className="blogListing-title">{season.title}</h1></Link>
                                     <p className="blog-date">{season.blogDate} </p>
                                     <p className="blog-description">
-                                        {season.description}
+                                        {season.description.substring(0, 250)} ...
                                     </p>
                                 </div>
                             </div>

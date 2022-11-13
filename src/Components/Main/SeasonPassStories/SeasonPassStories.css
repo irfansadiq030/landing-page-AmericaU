@@ -1,0 +1,67 @@
+.seasonPassCard {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 0px auto 20px auto;
+    /* flex-direction: column; */
+}
+
+.seasonPass-img-container {
+    width: 370px;
+    height: 240px;
+    object-fit: contain;
+    /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seasonPassContent-container {
+    padding-left: 20px;
+    width: 65%;
+}
+
+.seasonStories-thumbnail {
+    width: 100%;
+    border: 3px solid black;
+}
+
+@media screen and (min-width:1400px) {
+    .seasonPassContent-container {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .seasonPassContent-container {
+        width: 72%;
+    }
+}
+
+/* Mobile Respinsiveness */
+
+@media screen and (max-width:800px) {
+    .seasonPassCard {
+        flex-direction: column;
+    }
+
+    .seasonPass-img-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .seasonPassContent-container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-height:400px) {
+    .seasonPassContent-container {
+        margin-top: 20px;
+    }
+}

@@ -10,8 +10,12 @@ import { getNews } from '../../../store/slices/news';
 const News = () => {
     // Redux
     const news = useSelector(getNews);
-    console.log(news[0].attachment[0]);
-    console.log(news.length)
+    // console.log(news);
+
+    // Filter News In detail to View
+    const [filterNews,setFilterNews] = useState(0);
+    // console.log(news[filterNews].attachment[0]);
+
     const [sliderRef, setSliderRef] = useState(null)
     const settings = {
         dots: false,
@@ -43,35 +47,14 @@ const News = () => {
             <div className="newspg-main">
                 <div className="newspg-content-container">
                     <div className="newspg-main-imgcontainer">
-                        <img className='newspg-main-img' src="images/chinese new year.jpg" alt="news main thumbnail" />
+                        <img className='newspg-main-img' src={news[filterNews].attachment[0]} alt="news main thumbnail" />
                     </div>
                     <div className="newspg-description-container">
+                        <h1 className="blogListing-title">{news[filterNews].title}</h1>
                         <p className="newspg-dscrp">
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
+                            {news[filterNews].content}
                         </p>
-                        <p className="newspg-dscrp">
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
-                        </p>
-                        <p className="newspg-dscrp">
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
-                        </p>
-                        <p className="newspg-dscrp">
-                            This week we want to celebrate Chinese New Year! Find the secret Tiger icons all
-                            over The Wilds to earn bonus experience points! Most importantly, think about the
-                            kind of hero you want to be this year.
-                        </p>
+                       
                     </div>
                 </div>
                 <div className="moreNews-sidebar-container">
@@ -84,9 +67,10 @@ const News = () => {
                             <Slider ref={setSliderRef} {...settings}>
                                 {
 
-                                    news && news.map(latestNews => <div className="moreNews-item">
+                                    news && news.map((latestNews, index) => <div onClick={() => setFilterNews(index)} className="moreNews-item">
                                         <img className='moreNewsImg' src={latestNews.attachment[0]} alt={latestNews.title} />
-                                    </div>)  
+                                    </div> ) 
+                                    
                                 }
                                 {/* <div className="moreNews-item">
                                     <img className='moreNewsImg' src="images/4-29 heroes news.png" alt="" />
@@ -113,7 +97,7 @@ const News = () => {
                         <Slider ref={setMobileSliderRef} {...mobileSettings}>
                             {
                                 
-                                // news && news.map(latetNews => <img className='mobileSlide-newsImg' src={latetNews.attachment[0]} alt="" />)  
+                                news && news.map(latetNews => <img className='mobileSlide-newsImg' src={latetNews.attachment[0]} alt="" />)  
                             }
                             {/* <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />
                             <img className='mobileSlide-newsImg' src="images/4-29 heroes news.png" alt="" />

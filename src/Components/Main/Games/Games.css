@@ -19,12 +19,16 @@
     background: #00a0c7;
     margin: 0px auto 50px auto;
     border: 5px solid #fff;
+    padding:10px 30px;
+}
+
+.gamesDataContainer {
     display: flex;
     /* flex-direction: column; */
-    padding: 10px 30px;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 85px;
 }
 
 .gameIcon {
@@ -46,6 +50,15 @@
     font-size: 18px;
     text-transform: uppercase;
     /* padding: 20px 30px; */
+}
+
+.games-pagintaion {
+    width: 90%;
+    /* background: #000; */
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 10px auto;
 }
 
 /* .gameIcon:first-child{
@@ -79,6 +92,6 @@
 @media screen and (min-width:1700px) {
 
     .gamesContentContainer {
-        min-height: 80vh;
+        min-height: 10vh;
     }
 }
