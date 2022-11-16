@@ -206,6 +206,89 @@
     text-decoration: none;
 }
 
+.modal {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 2px;
+    left: 0;
+    top: 0;
+    /* transform: translate(-60%, -50px); */
+    position: fixed;
+    z-index: 1111;
+    display: block;
+}
+
+.hide_modal {
+    display: none;
+}
+
+.modal_container {
+    position: absolute;
+    left: -10%;
+    width: 60%;
+    transform: translate(60%, 100px);
+    background: #fff;
+
+    /* Animation */
+    -webkit-animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.modalClose {
+    font-size: 30px;
+}
+
+.modal_close_span {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    background: #fff;
+    display: flex;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    top: -5px;
+    left: 5px;
+    border: 1px solid #fff;
+    position: relative;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-top
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-top {
+    0% {
+        /* left: 0%; */
+        -webkit-transform: translate(60%, 0px);
+        transform: translate(60%, 0px);
+    }
+
+    100% {
+        /* left: 60%; */
+        -webkit-transform: translate(60%, 100px);
+        transform: translate(60%, 100px);
+    }
+}
+
+@keyframes slide-top {
+    0% {
+        /* left: 0%; */
+        -webkit-transform: translate(-60%, 0px);
+        transform: translate(60%, 0px);
+    }
+
+    100% {
+        /* left: 60%; */
+        -webkit-transform: translate(60%, 100px);
+        transform: translate(60%, 100px);
+    }
+}
+
+
 /* Mobile Responsive */
 @media screen and (max-width:800px) {
     .seasonPs-container {
@@ -246,46 +329,88 @@
     .readmore-seasonStories-btn {
         margin: 0 auto;
     }
+
+    .modal {
+        width: 100%;
+        /* border: 2px solid black; */
+        min-height: 100vh;
+        /* left: -50%; */
+    }
+
+    .modal_container {
+        width: 90%;
+        left: -50%;
+    }
 }
 
-    @media screen and (max-width:1100px) {
+@media screen and (max-width:1100px) {
 
-        .seasonPs-container {
-            margin-left: 245px;
+    .seasonPs-container {
+        margin-left: 245px;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .seasonPs-container {
+        margin-left: 315px;
+    }
+}
+
+@media screen and (min-width:1700px) {
+    .seasonPs-sidebar {
+        width: 20%;
+    }
+
+    .seasonPs-descrp {
+        font-size: 18px;
+    }
+
+    .activeSeasonPs-data {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .seasonPs-main-img {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .latestSeasonStories-container {
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .readmore-seasonStories-btn {
+        margin-top: 0px;
+    }
+
+    /* Animation keyfram */
+
+    @-webkit-keyframes slide-top {
+        0% {
+            /* left: 0%; */
+            -webkit-transform: translate(60%, 0px);
+            transform: translate(60%, 0px);
+        }
+
+        100% {
+            /* left: 60%; */
+            -webkit-transform: translate(60%, 300px);
+            transform: translate(60%, 300px);
         }
     }
 
-    @media screen and (min-width:1440px) {
-        .seasonPs-container {
-            margin-left: 315px;
+    @keyframes slide-top {
+        0% {
+            /* left: 0%; */
+            -webkit-transform: translate(-60%, 0px);
+            transform: translate(60%, 0px);
+        }
+
+        100% {
+            /* left: 60%; */
+            -webkit-transform: translate(60%, 300px);
+            transform: translate(60%, 300px);
         }
     }
-
-    @media screen and (min-width:1700px) {
-        .seasonPs-sidebar {
-            width: 20%;
-        }
-
-        .seasonPs-descrp {
-            font-size: 18px;
-        }
-
-        .activeSeasonPs-data {
-            justify-content: flex-start;
-            margin-top: 20px;
-        }
-
-        .seasonPs-main-img {
-            width: 90%;
-            margin: 0 auto;
-        }
-
-        .latestSeasonStories-container {
-            width: 80%;
-            margin: 20px auto;
-        }
-
-        .readmore-seasonStories-btn {
-            margin-top: 0px;
-        }
-    }
+}

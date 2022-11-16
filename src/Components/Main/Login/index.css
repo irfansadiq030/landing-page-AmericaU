@@ -244,7 +244,7 @@
     color: #fff;
     box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
     border-bottom: 5px solid #000;
-    text-shadow: -3px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
       -1px -1px 0 #000;
     display: flex;
     align-content: center;
@@ -284,7 +284,7 @@
     color: #fff;
     font-size: 40px;
     font-family: "Brady Bunch Remastered";
-    text-shadow: -4px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    text-shadow: 1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
       -1px -1px 0 #000;
   }
   
