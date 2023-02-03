@@ -24,7 +24,7 @@ const Sidebar = () => {
           <div className="logo-container">
             <Link onClick={() => HideSidebar(sidebar)} to="/">
               {" "}
-              <img className="logo-img" src={"images/logo.png"} alt="" />{" "}
+              <img className="logo-img" src={"logo.png"} alt="" />{" "}
             </Link>
           </div>
           <Navmenu />
