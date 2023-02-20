@@ -1,6 +1,6 @@
 {
   "short_name": "Heroes League Portal",
-  "name": "Heroes League Portal (Under Development)",
+  "name": "Heroes League Portal",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "/images/logo192.png",
+      "src": "/images/logo.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/logo512.png",
+      "src": "/images/logo.png",
       "type": "image/png",
       "sizes": "512x512"
     }

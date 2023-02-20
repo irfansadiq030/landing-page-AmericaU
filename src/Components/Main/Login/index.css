@@ -2,7 +2,8 @@
 
 @font-face {
   font-family: "Brady Bunch Remastered";
-  src: url("../../../../public/fonts/BradyBunchRemastered.woff2") format("woff2"),
+  src: url("../../../../public/fonts/BradyBunchRemastered.woff2")
+      format("woff2"),
     url("../../../../public/fonts/BradyBunchRemastered.woff") format("woff"),
     url("../../../../public/fonts/BradyBunchRemastered.ttf") format("truetype");
   font-weight: normal;
@@ -16,424 +17,422 @@
   /* font-family: "Brady Bunch Remastered"; */
 }
 
-
 .main_bg {
-    background-image: url("../../../../public/high-bg.jpg");
-    min-height: 100vh;
+  background-image: url("../../../../public/high-bg.jpg");
+  min-height: 100vh;
+}
+
+.header {
+  /* background-color: red; */
+
+  width: 20%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 100%;
+  max-width: 230px;
+}
+
+.components-container {
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* background-color: orange; */
+  z-index: 2;
+}
+
+/* Component Container Responsiveness */
+
+@media screen and (max-width: 400px) {
+}
+
+@media screen and (max-width: 600px) {
+  .components-container {
+    width: 90% !important;
   }
-  
-  .header {
-    /* background-color: red; */
-  
-    width: 20%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+
+  .logo {
+    width: 100%;
+    max-width: 105px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .components-container {
+    width: 70% !important;
+    /* margin-top: 40px; */
+  }
+
+  .logo {
+    width: 100%;
+    max-width: 170px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .components-container {
+    width: 65% !important;
+    /* margin-top: 40px; */
+  }
+}
+
+@media screen and (min-width: 1360px) {
+  .components-container {
+    width: 45% !important;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .components-container {
+    width: 45% !important;
   }
   .logo {
     width: 100%;
-    max-width: 230px;
+    max-width: 280px;
   }
-  
-  .components-container {
-    width: 45%;
-    margin-left: auto;
-    margin-right: auto;
-  
-    /* background-color: orange; */
-    z-index: 2;
-  }
-  
-  /* Component Container Responsiveness */
-  
-  @media screen and (max-width: 400px) {
-  }
-  
-  @media screen and (max-width: 600px) {
-    .components-container {
-      width: 90% !important;
-    }
-  
-    .logo {
-      width: 100%;
-      max-width: 105px;
-      margin: 0 auto;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .components-container {
-      width: 70% !important;
-      /* margin-top: 40px; */
-    }
-  
-    .logo {
-      width: 100%;
-      max-width: 170px;
-    }
-  }
-  
-  @media screen and (min-width: 1100px) {
-    .components-container {
-      width: 65% !important;
-      /* margin-top: 40px; */
-    }
-  }
-  
-  @media screen and (min-width: 1360px) {
-    .components-container {
-      width: 45% !important;
-    }
-  }
-  
-  @media screen and (min-width: 1500px) {
-    .components-container {
-      width: 45% !important;
-    }
-    .logo {
-      width: 100%;
-      max-width: 280px;
-    }
-  }
-  
+}
 
-  .reset-password-container {
-    width: 100%;
-    min-height: 400px;
-    border: 12px solid #002356;
-    background-color: #fff;
-    padding: 5px 30px;
-    position: relative;
-  }
-  
-  .back-button {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: -35px;
-    left: -25px;
-  }
-  
+.reset-password-container {
+  width: 100%;
+  min-height: 400px;
+  border: 12px solid #002356;
+  background-color: #fff;
+  padding: 5px 30px;
+  position: relative;
+}
+
+.back-button {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: -35px;
+  left: -25px;
+}
+
+.reset-form-heading {
+  font-family: "Brady Bunch Remastered";
+  font-size: 60px;
+  color: #002356;
+  line-height: 3.6rem;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 400px) {
   .reset-form-heading {
-    font-family: "Brady Bunch Remastered";
-    font-size: 60px;
-    color: #002356;
-    line-height: 3.6rem;
+    font-size: 37px !important;
   }
-  
-  /* Mobile Responsiveness */
-  
-  @media screen and (max-width: 400px) {
-    .reset-form-heading {
-      font-size: 37px !important;
-    }
-  }
-  
-  @media screen and (max-width: 500px) {
-    .reset-form-heading {
-      font-size: 50px;
-    }
-  }
-  
-  @media screen and (min-width: 768px) {
-    .reset-links-container {
-      margin-top: 40px;
-    }
-  }
-  @media screen and (min-width: 1500px) {
-    .reset-form-heading {
-      font-size: 80px;
-    }
-    .reset-links-container {
-      margin-top: 80px;
-    }
-  }
+}
 
-
-  .forgot-password-container {
-    width: 100%;
-    min-height: 100%;
-    border: 12px solid #002356;
-    background-color: #fff;
-    padding-left: 30px;
-    padding-right: 30px;
-    position: relative;
-    padding-top: 20px;
+@media screen and (max-width: 500px) {
+  .reset-form-heading {
+    font-size: 50px;
   }
-  
+}
+
+@media screen and (min-width: 768px) {
+  .reset-links-container {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .reset-form-heading {
+    font-size: 80px;
+  }
+  .reset-links-container {
+    margin-top: 80px;
+  }
+}
+
+.forgot-password-container {
+  width: 100%;
+  min-height: 100%;
+  border: 12px solid #002356;
+  background-color: #fff;
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.main {
+  flex: 1 0 auto;
+  /* border: 2px solid black; */
+  padding: 30px;
+}
+
+.message {
+  font-family: "Acme";
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+.return-link {
+  font-family: "Acme";
+  text-align: center;
+  font-size: 30px;
+  color: #5bbf38;
+}
+
+@media screen and (max-width: 600px) {
   .main {
-    flex: 1 0 auto;
-    /* border: 2px solid black; */
-    padding: 30px;
+    padding: 0;
   }
-  
   .message {
-    font-family: "Acme";
-    text-align: center;
-    font-size: 30px;
-    margin-bottom: 25px;
+    font-size: 22px;
   }
-  .return-link {
-    font-family: "Acme";
-    text-align: center;
-    font-size: 30px;
-    color: #5bbf38;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .main {
-      padding: 0;
-    }
-    .message {
-      font-size: 22px;
-    }
-  }
-  
-  .login-container {
-    width: 100%;
-    height: 100%;
-    border: 12px solid #002356;
-    background-color: #fff;
-    padding: 5px 30px 0px 30px;
-    margin-left: auto;
-  }
-  .login-form {
-    width: 100%;
-  }
-  .login-main {
-    flex: 1 0 auto;
-    padding-left: 10px;
-    padding-right: 10px;
-    height: 100%;
-  }
-  /* .form-heading {
+}
+
+.login-container {
+  width: 100%;
+  height: 100%;
+  border: 12px solid #002356;
+  background-color: #fff;
+  padding: 5px 30px 0px 30px;
+  margin-left: auto;
+}
+.login-form {
+  width: 100%;
+}
+.login-main {
+  flex: 1 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 100%;
+}
+/* .form-heading {
       font-family: 'Brady Bunch Remastered';
       font-size: 60px;
       color: #002356;
   } */
-  input[type="text"]::placeholder {
-    text-transform: uppercase;
-  }
-  input[type="password"]::placeholder {
-    text-transform: uppercase;
-  }
-  
-  .input-field {
-    border: 4px solid #002356;
-    padding-left: 10px;
-    border-radius: 0;
-    font-size: 25px;
-    padding-top: 6px;
-    padding-bottom: 6px;
-    font-family: "Acme", sans-serif;
-  
-    /* text-transform: uppercase; */
-  }
-  
-  /* .input-field input {
+input[type="text"]::placeholder {
+  text-transform: uppercase;
+}
+input[type="password"]::placeholder {
+  text-transform: uppercase;
+}
+
+.input-field {
+  border: 4px solid #002356;
+  padding-left: 10px;
+  border-radius: 0;
+  font-size: 25px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-family: "Acme", sans-serif;
+
+  /* text-transform: uppercase; */
+}
+
+/* .input-field input {
       font-size: 16px;
   } */
-  
-  .btn-americau {
-    padding: 0;
-    background: #60cb3d;
-    text-align: center;
-    font-family: "Brady Bunch Remastered";
-    font-size: 40px;
-    color: #fff;
-    box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
-    border-bottom: 5px solid #000;
-    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-    display: flex;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-  
-  .forgot-pwd-container {
-    font-family: "Brady Bunch Remastered";
-    color: white;
-    font-size: 17px;
-    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-  }
-  
-  .or-text {
-    font-family: "Brady Bunch Remastered";
-    color: white;
-    font-size: 17px;
-    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-  }
-  
-  .login-class-btn {
-    @apply text-2xl md:text-3xl lg:text-4xl text-center;
-    background: #00a0c7;
-    color: #fff;
-    padding: 5px 30px;
-    font-family: "Brady Bunch Remastered";
-    box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
-    border-bottom: 2px solid #000;
-    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-  }
-  
+
+.btn-americau {
+  padding: 0;
+  background: #60cb3d;
+  text-align: center;
+  font-family: "Brady Bunch Remastered";
+  font-size: 40px;
+  color: #fff;
+  box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
+  border-bottom: 5px solid #000;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.forgot-pwd-container {
+  font-family: "Brady Bunch Remastered";
+  color: white;
+  font-size: 17px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.or-text {
+  font-family: "Brady Bunch Remastered";
+  color: white;
+  font-size: 17px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.login-class-btn {
+  @apply text-2xl md:text-3xl lg:text-4xl text-center;
+  background: #00a0c7;
+  color: #fff;
+  padding: 5px 30px;
+  font-family: "Brady Bunch Remastered";
+  box-shadow: inset 7px -7px rgb(0 0 0 / 42%);
+  border-bottom: 2px solid #000;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.learn-more-heading {
+  color: #fff;
+  font-size: 40px;
+  font-family: "Brady Bunch Remastered";
+  text-shadow: 1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+}
+
+.dont-have-account {
+  color: #fff;
+  font-size: 17px;
+  font-family: "Brady Bunch Remastered";
+  text-shadow: -2px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  margin-top: 10px;
+}
+
+.signup-text {
+  color: #60cb3d;
+  font-size: 40px;
+  font-family: "Brady Bunch Remastered";
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  margin-top: -25px;
+}
+.links-container {
+  margin-top: 20px;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 400px) {
+  .signup-text,
   .learn-more-heading {
-    color: #fff;
-    font-size: 40px;
-    font-family: "Brady Bunch Remastered";
-    text-shadow: 1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
+    font-size: 25px !important;
   }
-  
+
   .dont-have-account {
-    color: #fff;
+    margin-bottom: 10px;
     font-size: 17px;
-    font-family: "Brady Bunch Remastered";
-    text-shadow: -2px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-    margin-top: 10px;
-  }
-  
-  .signup-text {
-    color: #60cb3d;
-    font-size: 40px;
-    font-family: "Brady Bunch Remastered";
-    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-      -1px -1px 0 #000;
-    margin-top: -25px;
   }
   .links-container {
-    margin-top: 20px;
+    margin-top: 5px;
   }
-  
-  /* Responsiveness */
-  @media screen and (max-width: 400px) {
-    .signup-text,
-    .learn-more-heading {
-      font-size: 25px !important;
-    }
-  
-    .dont-have-account {
-      margin-bottom: 10px;
-      font-size: 17px;
-    }
-    .links-container {
-      margin-top: 5px;
-    }
-    .btn-americau {
-      font-size: 30px;
-    }
+  .btn-americau {
+    font-size: 30px;
   }
-  
-  @media screen and (max-width: 500px) {
-    .forgot-pwd-container {
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    .forgot-pwd-txt {
-      padding-left: 0px;
-    }
-  
-    .signup-text,
-    .learn-more-heading {
-      font-size: 30px;
-    }
-  
-    .links-container {
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: center;
-    }
+}
+
+@media screen and (max-width: 500px) {
+  .forgot-pwd-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
   }
-  
-  @media screen and (max-width: 768px) {
-    .or-text {
-      margin-top: 10px;
-    }
-  
-    .forgot-pwd-container {
-      display: none;
-    }
-  
-    .forgot-pwd-txt2 {
-      font-family: "Brady Bunch Remastered";
-      color: white;
-      font-size: 17px;
-      margin-top: 10px;
-      text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
-        -1px -1px 0 #000;
-    }
-  
-    .bottom-container {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    .login-main {
-      padding: 0;
-    }
-    .header {
-      width: 100%;
-      padding: 0;
-    }
+
+  .forgot-pwd-txt {
+    padding-left: 0px;
   }
-  
-  /* Hiding elements after tablet screeen */
-  @media screen and (min-width: 770px) {
-    .forgot-pwd-txt2 {
-      display: none;
-    }
+
+  .signup-text,
+  .learn-more-heading {
+    font-size: 30px;
   }
-  @media screen and (min-width: 1500px) {
-    .form-heading {
-      font-size: 80px;
-    }
-  
-    .btn-americau {
-      font-size: 60px;
-    }
-  
-    .login-btn-au {
-      /* margin-top: 35px; */
-    }
-  
-    .forgot-pwd-txt {
-      font-size: 25px;
-    }
-  
-    .or-text {
-      font-size: 25px;
-    }
-  
-    .forgot-pwd-container {
-      /* margin-top: 15px; */
-    }
-  
-    .learn-more-heading,
-    .signup-text {
-      font-size: 60px;
-    }
-  
-    .dont-have-account {
-      font-size: 25px;
-    }
-  
-    .links-container {
-      margin-top: 10px;
-    }
-    .login-form {
-      padding-top: 10px;
-    }
-    .message {
-      font-size: 40px !important;
-    }
-    .return-link {
-      font-size: 40px !important;
-    }
+
+  .links-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
   }
-  
+}
+
+@media screen and (max-width: 768px) {
+  .or-text {
+    margin-top: 10px;
+  }
+
+  .forgot-pwd-container {
+    display: none;
+  }
+
+  .forgot-pwd-txt2 {
+    font-family: "Brady Bunch Remastered";
+    color: white;
+    font-size: 17px;
+    margin-top: 10px;
+    text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+      -1px -1px 0 #000;
+  }
+
+  .bottom-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .login-main {
+    padding: 0;
+  }
+  .header {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+/* Hiding elements after tablet screeen */
+@media screen and (min-width: 770px) {
+  .forgot-pwd-txt2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .form-heading {
+    font-size: 80px;
+  }
+
+  .btn-americau {
+    font-size: 60px;
+  }
+
+  .forgot-pwd-txt {
+    font-size: 25px;
+  }
+
+  .or-text {
+    font-size: 25px;
+  }
+
+  .forgot-pwd-container {
+    /* margin-top: 15px; */
+  }
+
+  .learn-more-heading,
+  .signup-text {
+    font-size: 60px;
+  }
+
+  .dont-have-account {
+    font-size: 25px;
+  }
+
+  .links-container {
+    margin-top: 10px;
+  }
+  .login-form {
+    padding-top: 10px;
+  }
+  .message {
+    font-size: 40px !important;
+  }
+  .return-link {
+    font-size: 40px !important;
+  }
+}
+
+.login-main {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}

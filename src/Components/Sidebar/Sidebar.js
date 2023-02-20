@@ -11,6 +11,7 @@ const Sidebar = () => {
   const dispatch = useDispatch(logout);
 
   const logOutUser = () => {
+    localStorage.clear();
     dispatch(logout());
   };
 
