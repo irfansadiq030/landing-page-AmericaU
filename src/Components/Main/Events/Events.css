@@ -1,205 +1,208 @@
 .eventsPg-container {
-    background-image: url('../../../../public/images/events-bg.jpg');
-    /* background: #00a0c7; */
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat;
-    width: 100%;
-    /* height: 100%; */
-    color: #fff;
-    position: relative;
-    margin-left: 250px;
-    overflow: auto;
+  background-image: url("../../../../public/images/events-bg.jpg");
+  /* background: #00a0c7; */
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  width: 100%;
+  /* height: 100%; */
+  color: #fff;
+  position: relative;
+  margin-left: 250px;
+  overflow: auto;
 }
 
 .eventsData-container {
-    width: 100%;
-    padding: 0px 50px;
-    min-height: 80vh;
-    display: flex;
-    justify-content: space-between;
-    margin: 10px 0px;
+  width: 100%;
+  padding: 0px 50px;
+  min-height: 80vh;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
 }
 
 .mainEvents-sidebar {
-    width: 500px;
-    background-color: #009fc7a8;
-    height: 100%;
-    padding-bottom: 10px;
+  width: 500px;
+  background-color: #009fc7a8;
+
+  padding-bottom: 10px;
+  align-self: stretch;
 }
 
 .schoolEvents-sidebar {
-    width: 400px;
-    background-color: #e4e4e4a2;
-    min-height: 200px;
+  width: 400px;
+  background-color: #e4e4e4a2;
+  min-height: 200px;
 }
 
 .events-item {
-    width: 100%;
-    min-height: 180px;
-    padding: 10px 30px;
-    position: relative;
+  width: 100%;
+  min-height: 160px;
+  padding: 10px 30px;
+  position: relative;
 }
 
 .event-title {
-    font-family: 'Brady Bunch Remastered';
-    color: #fff;
-    font-size: 25px;
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    word-spacing: 5.5px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+  font-family: "Brady Bunch Remastered";
+  color: #fff;
+  font-size: 25px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  word-spacing: 5.5px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .event-descrp {
-    font-family: 'Brady Bunch Remastered';
-    color: #fff;
-    font-size: 18px;
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    word-spacing: 2.5px;
-    /* margin-bottom: 10px; */
-    /* text-transform: uppercase; */
+  font-family: "Brady Bunch Remastered";
+  color: #fff;
+  font-size: 22px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  word-spacing: 2.5px;
+}
+
+.not-found {
+  font-family: "Brady Bunch Remastered";
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  word-spacing: 2.5px;
+  font-size: 50px;
+  text-align: center;
+  position: relative;
+  top: 50px;
 }
 
 .event-date {
-    font-family: 'Brady Bunch Remastered';
-    color: #fff;
-    font-size: 18px;
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    word-spacing: 2.5px;
-    margin-top: 30px;
-    text-transform: uppercase;
+  font-family: "Brady Bunch Remastered";
+  font-size: 20px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  word-spacing: 2.5px;
+  text-transform: uppercase;
 }
 
 .event-btn {
-    position: absolute;
-    right: 30px;
-    bottom: 0px;
+  position: relative;
+}
+
+.date-n-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .btn-img {
-    width: 180px;
-    position: relative;
-    top: 0;
-
+  width: 180px;
+  position: relative;
+  top: 0;
 }
 
 .btntxt {
-    position: absolute;
-    top: 0;
-    left: 20px;
-    font-family: 'Brady Bunch Remastered';
-    color: #fff;
-    font-size: 45px;
-    text-shadow: -1px 1px 2px #000,
-        1px 3px 2px #000,
-        1px -1px 0 #000,
-        -1px -1px 0 #000;
-    word-spacing: 2.5px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  font-family: "Brady Bunch Remastered";
+  color: #fff;
+  font-size: 45px;
+  text-shadow: -1px 1px 2px #000, 1px 3px 2px #000, 1px -1px 0 #000,
+    -1px -1px 0 #000;
+  word-spacing: 2.5px;
 }
 
 .school-event-box {
-    padding: 10px;
-    min-height: 200px;
-    position: relative;
-    /* top: 0; */
-    /* background: #000; */
+  padding: 10px;
+  min-height: 200px;
+  position: relative;
+  /* top: 0; */
+  /* background: #000; */
 }
 
 .schoolEvent-img {
-    width: 95%;
-    position: relative;
-    top: 5px;
-    left: 5px;
-    /* margin: 0 auto; */
+  width: 95%;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  /* margin: 0 auto; */
 }
 
 .school-event-content {
-    width: 80%;
-    height: 70%;
-    background-color: #fff;
-    border: 2px solid black;
-    position: absolute;
-    top: 30px;
-    /* margin: 0 auto; */
-    left: 30px;
+  width: 80%;
+  height: 70%;
+  background-color: #fff;
+  border: 2px solid black;
+  position: absolute;
+  top: 30px;
+  /* margin: 0 auto; */
+  left: 30px;
 }
 
 .schl-even-title {
-    font-family: 'Acme';
-    color: #000;
-    font-size: 15px;
-    margin: 10px;
+  font-family: "Acme";
+  color: #000;
+  font-size: 15px;
+  margin: 10px;
 }
 
 .scl-event-descrp {
-    font-family: 'Acme';
-    color: #000;
-    font-size: 14px;
-    margin: 10px;
-
+  font-family: "Acme";
+  color: #000;
+  font-size: 14px;
+  margin: 10px;
 }
 
 .scl-event-dateContnr {
-    display: flex;
-    justify-content: space-between;
-    min-width: 100px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100px;
 }
 
 .schl-event-date {
-    font-family: 'Acme';
-    color: #000;
-    font-size: 15px;
-    margin: 10px;
+  font-family: "Acme";
+  color: #000;
+  font-size: 15px;
+  margin: 10px;
 }
 
 /* Mobile Responsive */
-@media screen and (max-width:800px) {
-    .eventsPg-container {
-        margin: 0 !important;
-    }
+@media screen and (max-width: 800px) {
+  .eventsPg-container {
+    margin: 0 !important;
+  }
 
-    .eventsData-container {
-        padding: 0 20px;
-        flex-direction: column;
-    }
+  .eventsData-container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
 
-    .mainEvents-sidebar {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+  .mainEvents-sidebar {
+    width: 100%;
+    margin-bottom: 10px;
+  }
 
-    .events-item {
-        min-height: 260px;
-    }
+  .events-item {
+    min-height: 260px;
+  }
 
-    .schoolEvents-sidebar{
-        width: 100%;
-    }
+  .schoolEvents-sidebar {
+    width: 100%;
+  }
 }
 
-@media screen and (max-width:1100px) {
-
-    .eventsPg-container {
-        margin-left: 245px;
-    }
+@media screen and (max-width: 1100px) {
+  .eventsPg-container {
+    margin-left: 245px;
+  }
 }
 
-@media screen and (min-width:1440px) {
-    .eventsPg-container {
-        margin-left: 315px;
-    }
+@media screen and (min-width: 1440px) {
+  .eventsPg-container {
+    margin-left: 315px;
+  }
 }
 
-@media screen and (min-width:1700px) {}
+@media screen and (min-width: 1700px) {
+}

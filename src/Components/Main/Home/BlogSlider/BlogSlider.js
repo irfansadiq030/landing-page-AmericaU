@@ -8,6 +8,9 @@ import { getBlog } from "../../../../store/slices/blog";
 import { imagesBase } from "../../../../services/api";
 import { formateDate } from "../../../Shared/dateformater";
 import { Link } from "react-router-dom";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
 
 const BlogSlider = () => {
   const [sliderRef, setSliderRef] = useState(null);

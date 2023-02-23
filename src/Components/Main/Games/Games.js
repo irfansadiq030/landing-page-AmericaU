@@ -1,84 +1,64 @@
-import React from 'react'
-import './Games.css'
-import MobileHeader from '../MobileHeader/MobileHeader'
-import PageTitle from '../PageTitle/PageTitle'
-import { useSelector } from 'react-redux'
-import { getGames } from '../../../store/slices/games'
+import React from "react";
+import "./Games.css";
+import MobileHeader from "../MobileHeader/MobileHeader";
+import PageTitle from "../PageTitle/PageTitle";
+import { useSelector } from "react-redux";
+import { getGames } from "../../../store/slices/games";
 
-// const gamesData = [
-//     {
-//         title: 'Race',
-//         icon: 'Game_Icon_Race.png'
-//     },
-//     {
-//         title: 'KRISPER KRUSH',
-//         icon: 'Game_Icon_Krisper.png'
-//     },
-//     {
-//         title: 'VOLLEYBALL',
-//         icon: 'Game_Icon_HLG-Volleyball.png'
-//     },
-//     {
-//         title: 'SKATE',
-//         icon: 'Game_Icon_HLG-SpeedSkating.png'
-//     },
-//     {
-//         title: 'SOCCER',
-//         icon: 'Game_Icon_HLG-Soccer.png'
-//     },
-//     {
-//         title: 'SKI JUMP',
-//         icon: 'Game_Icon_HLG-SkiRace.png'
-//     },
-//     {
-//         title: 'POLE VAULT',
-//         icon: 'Game_Icon_HLG-Pole.png'
-//     },
-//     {
-//         title: 'OBSTACLES',
-//         icon: 'Game_Icon_HLG-Obstacle.png'
-//     },
-//     {
-//         title: 'LONG JUMP',
-//         icon: 'Game_Icon_HLG-LongJump.png'
-//     },
-//     {
-//         title: 'SHOT PUT',
-//         icon: 'Game_Icon_HLG-Hammer.png'
-//     }
-// ]
+import { Swiper, SwiperSlide } from "swiper/react";
 
-// const iconBaseURL = 'images/games-icons/';
+import "swiper/css";
+import "swiper/css/pagination";
+import SliderLeftButton from "./SliderLeftButton";
+import SliderRightButton from "./SliderRightButton";
 
 const Games = () => {
-    const games = useSelector(getGames);
-    // console.log(games);
-    return (
-        <div className='gamesPg-container'>
-            <MobileHeader />
-            <PageTitle title="Games" />
-            <div className="gamesContentContainer">
-                <div className="gamesDataContainer">
-                    {
-                        games.map((game, index) => {
-                            return (
-                                <div key={index} className="gameIcon">
-                                    {/* <img src={iconBaseURL+game.icon} alt="games race icon" /> */}
-                                    {/* <h2 className='gameTitle'>{game.title}</h2> */}
-                                    <img src={game.img} alt="games race icon" />
-                                    <a rel="noreferrer" target="_blank" href={game.play_url}><h2 className='gameTitle'>{game.name}</h2></a>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-                <div className="games-pagintaion">
-                    <img className='blog-left-arrow' src="images/blog-left-arrow.png" alt="" />
-                    <img className='blog-right-arrow' src="images/blog-right-arrow.png" alt="" />
-                </div>
-            </div>
-        </div>
-    )
-}
+  const games = useSelector(getGames);
 
-export default Games
+  const openGame = (game) => {
+    window.open(game, "_blank");
+  };
+
+  return (
+    <div className="gamesPg-container">
+      <MobileHeader />
+      <PageTitle title="Games" />
+      <div className="gamesContentContainer">
+        <div className="gamesDataContainer">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            pagination={{
+              clickable: true,
+            }}
+            className="mySwiper"
+          >
+            {games.map((game, index) => {
+              return (
+                <SwiperSlide>
+                  <div
+                    key={index}
+                    className="gameIcon"
+                    onClick={() => openGame(game.play_url)}
+                  >
+                    <img src={game.img} alt="games race icon" />
+                    <h2 className="gameTitle">{game.name}</h2>
+                  </div>
+                </SwiperSlide>
+              );
+            })}
+
+            <span slot="container-end">
+              <div className="games-pagintaion">
+                <SliderLeftButton />
+                <SliderRightButton />
+              </div>
+            </span>
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Games;

@@ -1,0 +1,150 @@
+.frame-container {
+  background: rgba(0, 35, 86, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+}
+
+.frame {
+  width: 100%;
+  max-width: 700px;
+  background-image: linear-gradient(#29c2fd, #0178a5);
+  border: solid 7px black;
+  z-index: 9999999999;
+  min-height: 55vh;
+  margin: auto;
+  position: relative;
+  padding: 1rem;
+}
+
+.top-area {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  top: -57px;
+}
+
+.frame-body {
+  border: solid black 2px;
+  box-shadow: black 2px 2px 0px 2px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.frame-content {
+  font-size: 2.1rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.title {
+  width: 370px;
+  background-image: url("./Emotes.png");
+  margin: 0 auto;
+}
+
+.title h1 {
+  font-size: 40px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-weight: bold;
+}
+
+.left-circles {
+  position: absolute;
+  left: -100px;
+  bottom: -110px;
+  z-index: 0;
+  width: 100%;
+  max-width: 390px;
+}
+
+.right-circles {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 100%;
+  max-width: 390px;
+}
+
+.coins-container {
+  background-image: url("./PowerSelect_bgSplash_green.png");
+  height: 264px;
+  width: 389px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.strip {
+  background-image: url("./SP-Label_blue-dark.png");
+  height: 110px;
+  width: 333px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.strip .content {
+  transform: rotate(353deg);
+  padding: 2px 40px;
+}
+
+.content .text {
+  color: #ff8500;
+  font-size: 60px;
+  font-weight: bold;
+  text-shadow: black 2px 2px, black -2px -2px, black -2px 2px, black 2px -2px;
+}
+
+.button {
+  background-size: cover;
+  background-image: url("./btn9s-Green.png");
+  height: 63px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.button h1 {
+  color: white !important;
+  font-size: 2rem;
+  text-shadow: black 2px 2px, black -2px -2px, black 2px -2px, black -2px 2px;
+}
+
+.bottom-area {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 95%;
+  bottom: -35px;
+}
+
+input,
+input::placeholder {
+  font-family: "Brady Bunch Remastered";
+}
+
+.close-png {
+  position: absolute;
+  right: -15px;
+  bottom: -10px;
+  cursor: pointer;
+}

@@ -10,7 +10,6 @@ import { getSeasons } from "../../../store/slices/season";
 const Home = () => {
   const season = useSelector(getSeasons);
 
-  console.log(season);
   return (
     <div className="home-container">
       <MobileHeader />
@@ -18,7 +17,7 @@ const Home = () => {
         <div className="season-box">
           <h1 className="season-heading">{season?.main_title}</h1>
           <p className="season-description">{season?.main_content}</p>
-          <a href="/" className="btn">
+          <a href="https://portal.americau.com/loading" className="btn">
             Play Now
           </a>
         </div>
