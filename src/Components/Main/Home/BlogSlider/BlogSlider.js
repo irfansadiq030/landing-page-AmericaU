@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./BlogSlider.css";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useSelector } from "react-redux";
@@ -11,9 +10,15 @@ import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
+import { Navigation } from "swiper";
+import "swiper/css/navigation";
+import { useRef } from "react";
+import { useCallback } from "react";
 
 const BlogSlider = () => {
-  const [sliderRef, setSliderRef] = useState(null);
+  const navigationPrevRef = React.useRef(null);
+  const navigationNextRef = React.useRef(null);
+
   const settings = {
     dots: false,
     arrows: false,
@@ -22,37 +27,6 @@ const BlogSlider = () => {
     slidesToShow: 3,
     slidesToScroll: 0,
     centerPadding: "20px",
-    responsive: [
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 1,
-        },
-      },
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 2200,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-        },
-      },
-    ],
   };
 
   // Fetching data
@@ -64,45 +38,92 @@ const BlogSlider = () => {
     return new Date(b.c_time).getTime() - new Date(a.c_time).getTime();
   });
 
+  const sliderRef = useRef(null);
+
+  const handlePrev = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slidePrev();
+  }, []);
+
+  const handleNext = useCallback(() => {
+    if (!sliderRef.current) return;
+    sliderRef.current.swiper.slideNext();
+  }, []);
+
+  console.log(sortedBlogs[0]);
+
   return (
     <>
       <div className="blog-container">
-        <div className="left-arrow-container">
+        <Swiper
+          breakpoints={{
+            640: {
+              slidesPerView: 1,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 5,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 10,
+            },
+            1365: {
+              slidesPerView: 4,
+              spaceBetween: 10,
+            },
+          }}
+          ref={sliderRef}
+          mousewheel={true}
+          keyboard={true}
+          modules={[Navigation]}
+          className="mySwiper"
+          navigation={{
+            prevEl: navigationPrevRef.current,
+            nextEl: navigationNextRef.current,
+          }}
+          onBeforeInit={(swiper) => {
+            swiper.params.navigation.prevEl = navigationPrevRef.current;
+            swiper.params.navigation.nextEl = navigationNextRef.current;
+          }}
+        >
           <img
-            className="slider-arrow"
+            className="swiper-button-prev"
+            ref={navigationPrevRef}
             onClick={sliderRef?.slickPrev}
             src="/images/icon-back.png"
             alt=""
           />
-        </div>
 
-        <Slider ref={setSliderRef} {...settings}>
-          {blogs.map((blog) => (
-            <div className="blog-box">
-              <Link to="/blog/blog-detail" state={{ ...blog }}>
-                <img
-                  className="blog-img"
-                  src={imagesBase + blog.theme_img}
-                  alt=""
-                />
+          {sortedBlogs.map((blog) => (
+            <SwiperSlide key={blog?.id}>
+              <div className="blog-box">
+                <Link to="/blog/blog-detail" state={{ ...blog }}>
+                  <img
+                    className="blog-img"
+                    src={imagesBase + blog.theme_img}
+                    alt=""
+                  />
 
-                <div className="blog-content-container">
-                  <span className="blog-date">{formateDate(blog.c_time)}</span>
-                  <h1 className="blog-title">{blog.title}</h1>
-                </div>
-              </Link>
-            </div>
+                  <div className="blog-content-container">
+                    <span className="blog-date">
+                      {formateDate(blog.c_time)}
+                    </span>
+                    <h1 className="blog-title">{blog.title}</h1>
+                  </div>
+                </Link>
+              </div>
+            </SwiperSlide>
           ))}
-        </Slider>
 
-        <div className="right-arrow-container">
           <img
-            className="slider-arrow"
+            className="swiper-button-next"
+            ref={navigationNextRef}
             onClick={sliderRef?.slickNext}
             src="/images/icon-next.png"
             alt=""
           />
-        </div>
+        </Swiper>
       </div>
     </>
   );

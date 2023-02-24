@@ -5,7 +5,7 @@ import PageTitle from "../PageTitle/PageTitle";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { useSelector } from "react-redux";
+
 const heroesData = [
   {
     img: "KID EINSTEIN-min.png",
@@ -115,6 +115,7 @@ const heroesNames = [
   "Karmzah ",
   "Deedles ",
 ];
+
 const MeetHeroes = () => {
   const [heroName, setHeroName] = useState(true);
   const [sliderRef, setSliderRef] = useState(null);
@@ -176,7 +177,7 @@ const MeetHeroes = () => {
           {/* <option value="1">Dean Archer</option>
                     <option value="1">Mental Ninja</option> */}
         </select>
-        <i class="fa-solid fa-chevron-down hrn-dropdown-icon"></i>
+        <i className="fa-solid fa-chevron-down hrn-dropdown-icon"></i>
       </div>
       <div className="heroes-data-container">
         <div className="left-arrow-container">
@@ -205,7 +206,7 @@ const MeetHeroes = () => {
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowfullscreen
-                  ></iframe>
+                  />
                 </div>
               </div>
             );

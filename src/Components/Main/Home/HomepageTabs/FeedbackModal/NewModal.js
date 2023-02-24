@@ -48,19 +48,19 @@ export default function NewModal({ dismiss }) {
   };
 
   return (
-    <div class="frame-container">
-      <img src={require("./HL_UI-BgCircle-lg.png")} class="left-circles" />
-      <img src={require("./HL_UI-BgCircle-lg.png")} class="right-circles" />
-      <div class="frame">
-        <div class="top-area">
-          <div class="title bg-cover">
+    <div className="frame-container">
+      <img src={require("./HL_UI-BgCircle-lg.png")} className="left-circles" />
+      <img src={require("./HL_UI-BgCircle-lg.png")} className="right-circles" />
+      <div className="frame">
+        <div className="top-area">
+          <div className="title bg-cover">
             <h1>Feedback</h1>
           </div>
 
           <img onClick={dismiss} className="close-png" src="images/close.png" />
         </div>
 
-        <div class="frame-body bg-white h-full">
+        <div className="frame-body bg-white h-full">
           {type === "form" && (
             <FeedbackForm value={inputData} onInputData={setInputData} />
           )}
@@ -68,9 +68,9 @@ export default function NewModal({ dismiss }) {
           {type === "loading" && <div className="loading-spinner" />}
         </div>
 
-        <div class="bottom-area">
+        <div className="bottom-area">
           <div
-            class="button"
+            className="button"
             onClick={
               type === "form"
                 ? submitFeedback
