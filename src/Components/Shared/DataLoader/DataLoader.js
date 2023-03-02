@@ -19,26 +19,38 @@ export default function DataLoader({ children }) {
     const loadData = async () => {
       toast.loading("We are loading data...");
 
-      const [news, season, events, videos, games, comics, blog, stories] =
-        await Promise.all([
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getNews" }),
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getCurSeason" }),
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getEvents" }),
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getVideos" }),
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getMiniGames" }),
-          apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getComics" }),
-          apiCallerPost({ cmd: "auth_HeroLeagueBlogOpen.getBlog" }),
-          apiCallerPost({
-            cmd: "auth_HeroLeaguePortalIndex.getCurSeasonStory",
-          }),
-        ]);
+      const [
+        news,
+        season,
+        events,
+        videos,
+        games,
+        comics,
+        blog,
+        stories,
+        comicsData,
+      ] = await Promise.all([
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getNews" }),
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getCurSeason" }),
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getEvents" }),
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getVideos" }),
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getMiniGames" }),
+        apiCallerPost({ cmd: "auth_HeroLeaguePortalIndex.getComics" }),
+        apiCallerPost({ cmd: "auth_HeroLeagueBlogOpen.getBlog" }),
+        apiCallerPost({
+          cmd: "auth_HeroLeaguePortalIndex.getCurSeasonStory",
+        }),
+        apiCallerPost({
+          cmd: "HLComic.getComics",
+        }),
+      ]);
 
       dispatch(loadNews(news.data.data));
       dispatch(loadSeasons(season.data.data));
       dispatch(loadEvents(events.data.data));
       dispatch(loadVideos(videos.data.data));
       dispatch(loadGames(games.data.data));
-      dispatch(loadComics(comics.data.data));
+      dispatch(loadComics({ list: comics.data.data, data: comicsData.data }));
       dispatch(loadBlog(blog.data.blogs));
       dispatch(loadStories({ stories: stories.data.data }));
 

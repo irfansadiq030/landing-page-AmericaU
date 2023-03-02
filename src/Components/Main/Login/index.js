@@ -8,7 +8,7 @@ import { Formik, Form, Field } from "formik";
 import Spinner from "./../../Shared/Spinner/Spinner";
 import { useDispatch, useSelector } from "react-redux";
 import { getUser, login } from "../../../store/slices/user";
-import { apiCaller, apiCallerPost } from "./../../../services/api";
+import { apiCallerPost } from "./../../../services/api";
 
 export default function Index() {
   const navigate = useNavigate();

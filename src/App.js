@@ -17,7 +17,7 @@ import MeetHeroes from "./Components/Main/MeetHeroes/MeetHeroes";
 import BlogListing from "./Components/Main/BlogListing/BlogListing";
 import Leaderboard from "./Components/Main/Leaderboard/Leaderboard";
 import SeasonPassStories from "./Components/Main/SeasonPass/SeasonPassStories/SeasonPassStories";
-import ComicsListing from "./Components/Main/ComicsListing/ComicsListing";
+import ComicsListing from "./Components/Main/Comics/ComicsListing/ComicsListing";
 import VideosPage from "./Components/Main/VideosPage/VideosPage";
 import BlogDetail from "./Components/Main/BlogListing/BlogDetail/BlogDetail";
 import News from "./Components/Main/News/News";
@@ -93,8 +93,8 @@ function App() {
               <Route path="blog/blog-detail" element={<BlogDetail />} />
               <Route path="blog" element={<BlogListing />} />
               <Route path="videos" element={<VideosPage />} />
+              <Route path="comics/comics-list" element={<ComicsListing />} />
               <Route path="comics" element={<Comics />} />
-              <Route path="comics-list" element={<ComicsListing />} />
               <Route path="news" element={<News />} />
               <Route path="games" element={<Games />} />
               <Route
