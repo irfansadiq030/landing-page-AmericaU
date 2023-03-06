@@ -14,11 +14,11 @@ export default function ComicModal({ comic, dismiss }) {
   const flipBook = React.useRef(null);
 
   const nextButtonClick = () => {
-    flipBook.current?.pageFlip()?.turnToNextPage();
+    flipBook.current?.pageFlip()?.flipNext();
   };
 
   const prevButtonClick = () => {
-    flipBook.current?.pageFlip()?.turnToPrevPage();
+    flipBook.current?.pageFlip()?.flipPrev();
   };
 
   return (
@@ -27,8 +27,9 @@ export default function ComicModal({ comic, dismiss }) {
         <HTMLFlipBook
           useMouseEvents={true}
           width={850}
-          height={1233}
-          size="stretch"
+          height={600}
+          // height={1233}
+          size="fixed"
           maxShadowOpacity={0.5}
           showCover={true}
           mobileScrollSupport={true}
@@ -47,7 +48,7 @@ export default function ComicModal({ comic, dismiss }) {
           <PageCover>THE END</PageCover>
         </HTMLFlipBook>
 
-        <div className="flex flex-row justify-center top-4 relative">
+        <div className="flex flex-row justify-center w-full top-4 fixed">
           <button
             onClick={prevButtonClick}
             className=" mr-2 text-2xl  text-black bg-blue-300 rounded py-2 px-5"

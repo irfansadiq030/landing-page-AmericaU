@@ -68,8 +68,9 @@
   border-radius: 1px;
 }
 
-.blogDetail-content-container p {
+.blogDetail-content-container p,strong {
   padding: 15px 0px;
+  font-family: Arial;
 }
 
 .blogComment-container {
